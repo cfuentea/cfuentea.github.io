@@ -50,3 +50,8 @@ body {
     text-decoration: underline;
 }
 
+.correo {
+    font-size: 14px; /* Tamaño de texto más pequeño */
+    color: #808080; /* Color menos visible */
+    margin: 0; /* Elimina el margen */
+}
