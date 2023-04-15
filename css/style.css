@@ -1,7 +1,7 @@
 body {
     background-color: black;
     font-family: 'Courier New', monospace;
-    color: #C0C0C0; /* Cambiamos el color del texto a gris */
+    color: #C0C0C0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,30 +10,36 @@ body {
 }
 
 .contenedor {
-    display: flex; /* Cambiamos a flexbox */
-    align-items: center; /* Centramos los elementos verticalmente */
+    display: flex;
+    align-items: center;
+}
+
+.informacion {
+    text-align: left; /* Alineamos el texto a la izquierda */
 }
 
 .imagen-persona {
     width: 150px;
     height: auto;
     border-radius: 50%;
-    margin-right: 20px; /* Agregamos un margen a la derecha de la imagen */
+    margin-right: 20px;
 }
 
 .nombre {
     font-size: 24px;
-    margin-top: 0; /* Quitamos el margen superior */
+    margin-top: 0;
+    margin-bottom: 10px; /* Agregamos un margen inferior al nombre */
 }
 
 .redes-sociales {
-    margin-top: 10px; /* Ajustamos el margen superior */
+    margin-top: 0; /* Quitamos el margen superior */
 }
 
 .enlace-red-social {
-    color: #C0C0C0; /* Cambiamos el color del enlace a gris */
+    color: #C0C0C0;
     text-decoration: none;
-    margin: 0 10px;
+    display: block; /* Cambiamos el estilo a bloque */
+    margin: 5px 0; /* Ajustamos el margen */
 }
 
 .enlace-red-social:hover {
