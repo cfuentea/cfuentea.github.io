@@ -55,3 +55,24 @@ body {
     color: #808080; /* Color menos visible */
     margin: 0; /* Elimina el margen */
 }
+
+.pie {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #222;
+    color: #C0C0C0;
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.pie a {
+    color: #C0C0C0;
+    text-decoration: none;
+}
+
+.pie a:hover {
+    text-decoration: underline;
+}
