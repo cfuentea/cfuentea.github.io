@@ -25,6 +25,19 @@ body {
     margin-right: 20px;
 }
 
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 2s ease-in-out;
+}
+
 .nombre {
     font-size: 24px;
     margin-top: 0;
