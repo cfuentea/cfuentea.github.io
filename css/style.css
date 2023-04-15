@@ -1,0 +1,39 @@
+body {
+    background-color: black;
+    font-family: 'Courier New', monospace;
+    color: #00FF00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.contenedor {
+    text-align: center;
+}
+
+.imagen-persona {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.nombre {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.redes-sociales {
+    margin-top: 20px;
+}
+
+.enlace-red-social {
+    color: #00FF00;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.enlace-red-social:hover {
+    text-decoration: underline;
+}
