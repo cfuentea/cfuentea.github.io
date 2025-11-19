@@ -1,36 +1,107 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <title>Carlos Fuentealba Flores - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Perfil Individual</title>
 </head>
+
 <body>
-    <div class="contenedor fade-in">
-        <img src="img/perfil.jpeg" alt="Imagen de Carlos" class="imagen-persona fade-in">
-        <div class="informacion">
-            <h1 class="nombre">Carlos Fuentealba Flores</h1>
-            <p class="correo">carlos (at) fuentealba (dot) dev</p>
-            <div class="redes-sociales">
-                <a href="https://www.linkedin.com/in/carlosfuentealba/" class="enlace-red-social">
-                    <i class="fab fa-linkedin"></i> LinkedIn
-                </a>
-                <a href="https://instagram.com/cfuentea" class="enlace-red-social">
-                    <i class="fab fa-instagram"></i> Instagram
-                </a>
-                <a href="https://github.com/cfuentea" class="enlace-red-social">
-                    <i class="fab fa-github"></i> Github
-                </a>
+    <div class="container">
+        <header class="fade-in">
+            <a href="#" class="logo">CF.</a>
+            <nav>
+                <ul>
+                    <li><a href="#about" data-i18n="nav_about">Sobre Mí</a></li>
+                    <li><a href="#skills" data-i18n="nav_skills">Habilidades</a></li>
+                    <li><a href="#contact" data-i18n="nav_contact">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="controls">
+                <button id="lang-toggle" class="btn-icon">EN</button>
+                <button id="theme-toggle" class="btn-icon"><i class="fas fa-moon"></i></button>
             </div>
-        </div>
+        </header>
+
+        <main>
+            <section class="hero fade-in">
+                <div class="hero-content">
+                    <p data-i18n="hero_greeting">Hola, soy</p>
+                    <h1>Carlos Fuentealba</h1>
+                    <h2 data-i18n="hero_role">Desarrollador de Software</h2>
+                    <p data-i18n="hero_desc">Transformando ideas en experiencias digitales excepcionales.</p>
+                </div>
+                <div class="hero-img">
+                    <img src="img/perfil.jpeg" alt="Carlos Fuentealba">
+                </div>
+            </section>
+
+            <section id="about" class="fade-in">
+                <h2 class="section-title" data-i18n="about_title">Sobre Mí</h2>
+                <div class="about-content">
+                    <p data-i18n="about_text">Soy un apasionado por la tecnología y el desarrollo de software. Me
+                        especializo en crear soluciones modernas, eficientes y escalables. Mi enfoque combina un diseño
+                        elegante con un código robusto.</p>
+                </div>
+            </section>
+
+            <section id="skills" class="fade-in">
+                <h2 class="section-title" data-i18n="skills_title">Habilidades Técnicas</h2>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <i class="fab fa-html5"></i>
+                        <h3>HTML5</h3>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fab fa-css3-alt"></i>
+                        <h3>CSS3</h3>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fab fa-js"></i>
+                        <h3>JavaScript</h3>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fab fa-react"></i>
+                        <h3>React</h3>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fab fa-node"></i>
+                        <h3>Node.js</h3>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fab fa-git-alt"></i>
+                        <h3>Git</h3>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="fade-in">
+                <h2 class="section-title" data-i18n="contact_title">Contáctame</h2>
+                <div class="contact-content">
+                    <p data-i18n="contact_desc">¿Tienes un proyecto en mente? ¡Hablemos!</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/carlosfuentealba/" class="social-link" target="_blank"><i
+                                class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/cfuentea" class="social-link" target="_blank"><i
+                                class="fab fa-github"></i></a>
+                        <a href="https://instagram.com/cfuentea" class="social-link" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="mailto:carlos@fuentealba.dev" class="social-link"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; <span id="year"></span> Carlos Fuentealba. <span data-i18n="footer_rights">Todos los derechos
+                    reservados.</span></p>
+        </footer>
     </div>
-    <div class="pie">
-        <p>© <span id="year"></span> Carlos Fuentealba Flores. Todos los derechos reservados. Alojado gracias a <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.</p>
-    </div>
+
+    <script type="module" src="js/main.js"></script>
 </body>
-<script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+
 </html>
