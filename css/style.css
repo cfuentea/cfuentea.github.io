@@ -217,23 +217,48 @@ section {
 /* Contact */
 .contact-content {
     text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.social-links {
+.social-links-list {
     display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 30px;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 40px;
+    align-items: center;
 }
 
-.social-link {
-    font-size: 2rem;
+.social-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
     color: var(--text-color);
-    transition: color 0.3s;
+    background-color: var(--card-bg);
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s, box-shadow 0.2s;
+    width: 100%;
+    max-width: 500px;
 }
 
-.social-link:hover {
+.social-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     color: var(--accent-color);
+}
+
+.social-item i {
+    font-size: 1.5rem;
+    width: 30px;
+    text-align: center;
+}
+
+.social-item span {
+    font-size: 1rem;
+    text-align: left;
 }
 
 /* Footer */
