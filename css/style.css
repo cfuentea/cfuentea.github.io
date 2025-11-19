@@ -98,6 +98,17 @@ nav a:hover {
     color: var(--accent-color);
 }
 
+/* Mobile Menu Button */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1001;
+}
+
 /* Hero Section */
 .hero {
     display: flex;
@@ -236,6 +247,37 @@ footer {
 
 /* Responsive */
 @media (max-width: 768px) {
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background-color: var(--card-bg);
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+        padding: 80px 20px;
+        transition: right 0.3s ease;
+        z-index: 1000;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .nav-menu a {
+        font-size: 1.2rem;
+    }
+
     .hero {
         flex-direction: column-reverse;
         text-align: center;
@@ -249,9 +291,15 @@ footer {
     .hero p {
         margin: 0 auto 30px;
     }
+}
 
-    nav ul {
-        display: none; /* Simple mobile menu hide for now */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        padding: 0 40px;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
     }
 }
 
@@ -261,6 +309,13 @@ footer {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

@@ -1,30 +1,30 @@
 const translations = {
     es: {
         nav_about: "Sobre Mí",
-        nav_skills: "Habilidades",
+        nav_skills: "Competencias",
         nav_contact: "Contacto",
         hero_greeting: "Hola, soy",
-        hero_role: "Desarrollador de Software",
-        hero_desc: "Transformando ideas en experiencias digitales excepcionales.",
+        hero_role: "Backend Developer & Tech Lead",
+        hero_desc: "Liderando equipos de alto desempeño y construyendo sistemas robustos y escalables.",
         about_title: "Sobre Mí",
-        about_text: "Soy un apasionado por la tecnología y el desarrollo de software. Me especializo en crear soluciones modernas, eficientes y escalables. Mi enfoque combina un diseño elegante con un código robusto.",
-        skills_title: "Habilidades Técnicas",
+        about_text: "Especialista en Backend, Big Data y Machine Learning con sólida experiencia en entornos Cloud (AWS, GCP, Azure) y sistemas UNIX/Linux. Me enfoco en liderar equipos de alto desempeño en el sector de telecomunicaciones y tecnología, gestionando proyectos multi-país y optimizando la gestión operativa.",
+        skills_title: "Competencias Técnicas",
         contact_title: "Contáctame",
-        contact_desc: "¿Tienes un proyecto en mente? ¡Hablemos!",
+        contact_desc: "¿Tienes un desafío tecnológico o de liderazgo? ¡Hablemos!",
         footer_rights: "Todos los derechos reservados."
     },
     en: {
         nav_about: "About Me",
-        nav_skills: "Skills",
+        nav_skills: "Competencies",
         nav_contact: "Contact",
         hero_greeting: "Hi, I am",
-        hero_role: "Software Developer",
-        hero_desc: "Transforming ideas into exceptional digital experiences.",
+        hero_role: "Backend Developer & Tech Lead",
+        hero_desc: "Leading high-performance teams and building robust, scalable systems.",
         about_title: "About Me",
-        about_text: "I am passionate about technology and software development. I specialize in creating modern, efficient, and scalable solutions. My approach combines elegant design with robust code.",
-        skills_title: "Technical Skills",
+        about_text: "Backend, Big Data, and Machine Learning specialist with strong experience in Cloud environments (AWS, GCP, Azure) and UNIX/Linux systems. I focus on leading high-performance teams in the telecommunications and technology sectors, managing multi-country projects, and optimizing operational management.",
+        skills_title: "Technical Competencies",
         contact_title: "Contact Me",
-        contact_desc: "Have a project in mind? Let's talk!",
+        contact_desc: "Have a technical or leadership challenge? Let's talk!",
         footer_rights: "All rights reserved."
     }
 };
