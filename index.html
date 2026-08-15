@@ -4,108 +4,481 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carlos Fuentealba Flores - Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Carlos Fuentealba Flores | Solutions Architect & Engineering Tech Lead</title>
+
+    <!-- Meta SEO Essentials -->
+    <meta name="description" content="Portfolio profesional de Carlos Fuentealba Flores. Solutions Architect & Tech Lead especializado en telecomunicaciones, resiliencia operacional, plataformas críticas y automatización a gran escala.">
+    <meta name="author" content="Carlos Fuentealba Flores">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#090d16" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#f8fafc" media="(prefers-color-scheme: light)">
+    <link rel="canonical" href="https://fuentealba.dev/">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><rect width=%2232%22 height=%2232%22 rx=%228%22 fill=%22%232563eb%22/><text x=%2216%22 y=%2222%22 font-family=%22system-ui,-apple-system,sans-serif%22 font-size=%2216%22 font-weight=%22800%22 fill=%22white%22 text-anchor=%22middle%22>CF</text></svg>">
+
+    <!-- Open Graph / Facebook / LinkedIn -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fuentealba.dev/">
+    <meta property="og:title" content="Carlos Fuentealba Flores | Solutions Architect & Tech Lead">
+    <meta property="og:description" content="Especialista en arquitectura de plataformas críticas, resiliencia operacional y automatización a gran escala en telecomunicaciones.">
+    <meta property="og:image" content="https://fuentealba.dev/img/perfil.jpeg">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://fuentealba.dev/">
+    <meta name="twitter:title" content="Carlos Fuentealba Flores | Solutions Architect & Tech Lead">
+    <meta name="twitter:description" content="Especialista en arquitectura de plataformas críticas, resiliencia operacional y automatización a gran escala.">
+    <meta name="twitter:image" content="https://fuentealba.dev/img/perfil.jpeg">
+
+    <!-- Preconnect to Google Fonts for Maximum Lighthouse Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,400..700,0..1,0&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Structured Data (JSON-LD) for Enhanced SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Carlos Fuentealba Flores",
+      "jobTitle": "Solutions Architect & Engineering Tech Lead",
+      "url": "https://fuentealba.dev/",
+      "image": "https://fuentealba.dev/img/perfil.jpeg",
+      "sameAs": [
+        "https://www.linkedin.com/in/carlosfuentealba/",
+        "https://github.com/cfuentea"
+      ],
+      "knowsAbout": [
+        "Solutions Architecture",
+        "Telecommunications",
+        "OSS/BSS Integration",
+        "Python",
+        "Cloud Computing",
+        "High Availability",
+        "Observability",
+        "Big Data",
+        "Technical Leadership"
+      ]
+    }
+    </script>
 </head>
 
 <body>
-    <div class="container">
-        <header class="fade-in">
-            <a href="#" class="logo">CF.</a>
-            <button class="mobile-menu-btn" aria-label="Toggle menu">
-                <i class="fas fa-bars"></i>
-            </button>
-            <nav class="nav-menu">
-                <ul>
+    <!-- Ambient Background Lighting -->
+    <div class="bg-ambient" aria-hidden="true">
+        <div class="ambient-orb-1"></div>
+        <div class="ambient-orb-2"></div>
+    </div>
+
+    <!-- Accessibility: Skip Link -->
+    <a href="#main-content" class="skip-link" data-i18n="skip_content">Saltar al contenido principal</a>
+
+    <!-- Header & Navigation -->
+    <header class="header-wrapper">
+        <div class="container header-inner">
+            <a href="#" class="logo" aria-label="Carlos Fuentealba - Inicio">
+                <span>CF</span><span class="logo-accent">.</span>
+            </a>
+
+            <nav class="nav-desktop" aria-label="Navegación principal">
+                <ul class="nav-links">
                     <li><a href="#about" data-i18n="nav_about">Sobre Mí</a></li>
                     <li><a href="#skills" data-i18n="nav_skills">Competencias</a></li>
+                    <li><a href="#impact" data-i18n="nav_impact">Impacto</a></li>
                     <li><a href="#contact" data-i18n="nav_contact">Contacto</a></li>
                 </ul>
             </nav>
-            <div class="controls">
-                <button id="lang-toggle" class="btn-icon">EN</button>
-                <button id="theme-toggle" class="btn-icon"><i class="fas fa-moon"></i></button>
+
+            <div class="header-controls">
+                <button id="lang-toggle" class="btn-icon-toggle" aria-label="Cambiar idioma" data-i18n-aria="lang_toggle_label">EN</button>
+                <button id="theme-toggle" class="btn-icon-toggle" aria-label="Cambiar tema" data-i18n-aria="theme_toggle_label">
+                    <span class="material-symbols-rounded" aria-hidden="true">dark_mode</span>
+                </button>
+                <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-expanded="false" aria-controls="mobile-nav-drawer" aria-label="Abrir menú" data-i18n-aria="menu_toggle_label">
+                    <span class="material-symbols-rounded" aria-hidden="true">menu</span>
+                </button>
             </div>
-        </header>
+        </div>
 
-        <main>
-            <section class="hero fade-in">
+        <!-- Mobile Navigation Drawer -->
+        <div id="mobile-nav-drawer" class="mobile-nav-drawer" aria-label="Menú móvil">
+            <ul>
+                <li><a href="#about" data-i18n="nav_about">Sobre Mí</a></li>
+                <li><a href="#skills" data-i18n="nav_skills">Competencias</a></li>
+                <li><a href="#impact" data-i18n="nav_impact">Impacto</a></li>
+                <li><a href="#contact" data-i18n="nav_contact">Contacto</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <div class="container">
+            <section class="hero-section">
                 <div class="hero-content">
-                    <p data-i18n="hero_greeting">Hola, soy</p>
-                    <h1>Carlos Fuentealba</h1>
-                    <h2 data-i18n="hero_role">Desarrollador de Software</h2>
-                    <p data-i18n="hero_desc">Transformando ideas en experiencias digitales excepcionales.</p>
-                </div>
-                <div class="hero-img">
-                    <img src="img/perfil.jpeg" alt="Carlos Fuentealba">
-                </div>
-            </section>
-
-            <section id="about" class="fade-in">
-                <h2 class="section-title" data-i18n="about_title">Sobre Mí</h2>
-                <div class="about-content">
-                    <p data-i18n="about_text">Lidero equipos multipaís...</p>
-                    <br>
-                    <p data-i18n="about_text_2">Desarrollo estrategias...</p>
-                </div>
-            </section>
-
-            <section id="skills" class="fade-in">
-                <h2 class="section-title" data-i18n="skills_title">Competencias Técnicas</h2>
-                <div class="skills-grid">
-                    <div class="skill-card">
-                        <i class="fab fa-python"></i>
-                        <h3>Python</h3>
+                    <div class="badge-status">
+                        <span class="pulse-dot" aria-hidden="true"></span>
+                        <span data-i18n="hero_badge">Disponible para consultoría estratégica y liderazgo</span>
                     </div>
-                    <div class="skill-card">
-                        <i class="fas fa-database"></i>
-                        <h3>Big Data</h3>
-                    </div>
-                    <div class="skill-card">
-                        <i class="fas fa-brain"></i>
-                        <h3>Machine Learning</h3>
-                    </div>
-                    <div class="skill-card">
-                        <i class="fab fa-linux"></i>
-                        <h3>Linux/UNIX</h3>
-                    </div>
-                    <div class="skill-card">
-                        <i class="fas fa-cloud"></i>
-                        <h3>Cloud (AWS/GCP/Azure)</h3>
-                    </div>
-                    <div class="skill-card">
-                        <i class="fas fa-users-cog"></i>
-                        <h3>Tech Leadership</h3>
-                    </div>
-                </div>
-            </section>
-
-            <section id="contact" class="fade-in">
-                <h2 class="section-title" data-i18n="contact_title">Contacto</h2>
-                <div class="contact-content">
-                    <p data-i18n="contact_desc">Si quieres conversar sobre arquitectura de soluciones...</p>
-                    <div class="social-links-list">
-                        <a href="https://www.linkedin.com/in/carlosfuentealba/" class="social-item" target="_blank">
-                            <i class="fab fa-linkedin"></i>
-                            <span data-i18n="linkedin_desc">Mi trayectoria profesional y responsabilidades
-                                actuales.</span>
+                    <p class="hero-greeting" data-i18n="hero_greeting">Hola, soy</p>
+                    <h1 class="hero-title" data-i18n="hero_name">Carlos Fuentealba</h1>
+                    <h2 class="hero-subtitle" data-i18n="hero_role">Solutions Architect & Engineering Tech Lead</h2>
+                    <p class="hero-description" data-i18n="hero_desc">
+                        Transformo la complejidad operativa en plataformas de telecomunicaciones y sistemas de datos altamente escalables, resilientes y automatizados.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#contact" class="btn-primary">
+                            <span class="material-symbols-rounded" aria-hidden="true">mail</span>
+                            <span data-i18n="hero_cta_contact">Iniciar Conversación</span>
                         </a>
-                        <a href="https://github.com/cfuentea" class="social-item" target="_blank">
-                            <i class="fab fa-github"></i>
-                            <span data-i18n="github_desc">Algunos proyectos y herramientas que he compartido.</span>
+                        <a href="https://www.linkedin.com/in/carlosfuentealba/" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+                            <span class="material-symbols-rounded" aria-hidden="true">open_in_new</span>
+                            <span data-i18n="hero_cta_linkedin">Ver LinkedIn</span>
                         </a>
+                        <button class="btn-secondary js-copy-email" data-email="contacto@fuentealba.dev" aria-label="Copiar correo electrónico">
+                            <span class="material-symbols-rounded" aria-hidden="true">content_copy</span>
+                            <span data-i18n="hero_copy_email">Copiar Email</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="hero-media">
+                    <div class="avatar-container">
+                        <div class="avatar-inner">
+                            <picture>
+                                <source srcset="img/perfil.webp" type="image/webp">
+                                <img src="img/perfil.jpeg" alt="Fotografía de Carlos Fuentealba Flores" width="556" height="556" fetchpriority="high" decoding="async">
+                            </picture>
+                        </div>
+                        <div class="avatar-tag">
+                            <span class="material-symbols-rounded" aria-hidden="true">verified</span>
+                            <span>Architect</span>
+                        </div>
                     </div>
                 </div>
             </section>
-        </main>
 
-        <footer>
-            <p>&copy; <span id="year"></span> Carlos Fuentealba. <span data-i18n="footer_rights">Todos los derechos
-                    reservados.</span></p>
-        </footer>
+            <!-- Stats & Key Metrics Strip -->
+            <div class="stats-strip reveal" aria-label="Métricas destacadas de trayectoria">
+                <div class="stat-item">
+                    <div class="stat-number" data-i18n="stat_exp_num">15+</div>
+                    <div class="stat-label" data-i18n="stat_exp_label">Años de Experiencia en TI</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-i18n="stat_teams_num">5+</div>
+                    <div class="stat-label" data-i18n="stat_teams_label">Países y Equipos Liderados</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-i18n="stat_resilience_num">99.99%</div>
+                    <div class="stat-label" data-i18n="stat_resilience_label">Disponibilidad Operacional</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-i18n="stat_auto_num">100+</div>
+                    <div class="stat-label" data-i18n="stat_auto_label">Integraciones & Flujos Críticos</div>
+                </div>
+            </div>
+
+            <!-- About Section -->
+            <section id="about" class="reveal">
+                <div class="section-header">
+                    <p class="section-subtitle" data-i18n="about_subtitle">Visión y Trayectoria</p>
+                    <h2 class="section-title" data-i18n="about_title">Arquitectura Estratégica y Liderazgo Técnico</h2>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-narrative">
+                        <p data-i18n="about_text">
+                            Lidero equipos multipaís y proyectos estratégicos en el sector de telecomunicaciones, especializándome en la arquitectura de soluciones para plataformas y sistemas de misión crítica que soportan la operación diaria.
+                        </p>
+                        <p data-i18n="about_text_2">
+                            Desarrollo estrategias integrales de monitoreo, gestión de inventarios y aseguramiento de calidad de red, uniendo la visión de negocio con la excelencia en ejecución técnica mediante Python, Linux, Cloud y herramientas avanzadas de observabilidad.
+                        </p>
+                    </div>
+
+                    <div class="pillars-grid">
+                        <div class="pillar-card">
+                            <div class="pillar-icon-box">
+                                <span class="material-symbols-rounded" aria-hidden="true">architecture</span>
+                            </div>
+                            <h3 class="pillar-title" data-i18n="pillar_1_title">Arquitectura Resiliente</h3>
+                            <p class="pillar-desc" data-i18n="pillar_1_desc">Diseño de sistemas distribuidos tolerantes a fallos, altamente disponibles y preparados para soportar cargas masivas de datos.</p>
+                        </div>
+                        <div class="pillar-card">
+                            <div class="pillar-icon-box">
+                                <span class="material-symbols-rounded" aria-hidden="true">sync_saved_locally</span>
+                            </div>
+                            <h3 class="pillar-title" data-i18n="pillar_2_title">Automatización Integral</h3>
+                            <p class="pillar-desc" data-i18n="pillar_2_desc">Eliminación de fricción y silos operativos conectando plataformas OSS/BSS e infraestructuras heterogéneas.</p>
+                        </div>
+                        <div class="pillar-card">
+                            <div class="pillar-icon-box">
+                                <span class="material-symbols-rounded" aria-hidden="true">groups</span>
+                            </div>
+                            <h3 class="pillar-title" data-i18n="pillar_3_title">Liderazgo de Equipos</h3>
+                            <p class="pillar-desc" data-i18n="pillar_3_desc">Dirección de equipos multidisciplinarios e internacionales con foco en buenas prácticas, mentoría y agilidad.</p>
+                        </div>
+                        <div class="pillar-card">
+                            <div class="pillar-icon-box">
+                                <span class="material-symbols-rounded" aria-hidden="true">insights</span>
+                            </div>
+                            <h3 class="pillar-title" data-i18n="pillar_4_title">Observabilidad Proactiva</h3>
+                            <p class="pillar-desc" data-i18n="pillar_4_desc">Implementación de telemetría y monitoreo predictivo para anticipar incidencias antes de que impacten al usuario.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Technical Competencies Section -->
+            <section id="skills" class="reveal">
+                <div class="section-header">
+                    <p class="section-subtitle" data-i18n="skills_subtitle">Stack & Especialidades</p>
+                    <h2 class="section-title" data-i18n="skills_title">Competencias Técnicas</h2>
+                </div>
+
+                <div class="competencies-container">
+                    <!-- Category 1: Architecture & Cloud -->
+                    <div class="competency-category">
+                        <div class="cat-header">
+                            <div class="cat-icon">
+                                <span class="material-symbols-rounded" aria-hidden="true">cloud_done</span>
+                            </div>
+                            <h3 class="cat-title" data-i18n="skills_cat_1">Arquitectura & Cloud</h3>
+                        </div>
+                        <div class="skills-chip-list">
+                            <span class="skill-chip">
+                                <span class="material-symbols-rounded" aria-hidden="true">dns</span> Solutions Architecture
+                            </span>
+                            <span class="skill-chip">
+                                <span class="material-symbols-rounded" aria-hidden="true">hub</span> Microservicios & APIs
+                            </span>
+                            <span class="skill-chip">
+                                <span class="material-symbols-rounded" aria-hidden="true">cloud</span> AWS / GCP / Azure
+                            </span>
+                            <span class="skill-chip">
+                                <span class="material-symbols-rounded" aria-hidden="true">security</span> High Availability & DR
+                            </span>
+                            <span class="skill-chip">
+                                <span class="material-symbols-rounded" aria-hidden="true">dataset</span> Telecom OSS / BSS
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Category 2: Development & Automation -->
+                    <div class="competency-category">
+                        <div class="cat-header">
+                            <div class="cat-icon">
+                                <span class="material-symbols-rounded" aria-hidden="true">terminal</span>
+                            </div>
+                            <h3 class="cat-title" data-i18n="skills_cat_2">Desarrollo & Automatización</h3>
+                        </div>
+                        <div class="skills-chip-list">
+                            <span class="skill-chip">
+                                <span class="material-symbols-rounded" aria-hidden="true">code</span> Python (Advanced)
+                            </span>
+                            <span class="skill-chip">
+                                <span class="material-symbols-rounded" aria-hidden="true">memory</span> Linux / UNIX Systems
+                            </span>
+                            <span class="skill-chip">
+                                <span class="material-symbols-rounded" aria-hidden="true">deployed_code</span> CI/CD & DevOps
+                            </span>
+                            <span class="skill-chip">
+                                <span class="material-symbols-rounded" aria-hidden="true">integration_instructions</span> ETL & Data Pipelines
+                            </span>
+                            <span class="skill-chip">
+                                <span class="material-symbols-rounded" aria-hidden="true">smart_toy</span> Workflow Automation
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Category 3: Observability & Data -->
+                    <div class="competency-category">
+                        <div class="cat-header">
+                            <div class="cat-icon">
+                                <span class="material-symbols-rounded" aria-hidden="true">query_stats</span>
+                            </div>
+                            <h3 class="cat-title" data-i18n="skills_cat_3">Observabilidad & Datos</h3>
+                        </div>
+                        <div class="skills-chip-list">
+                            <span class="skill-chip">
+                                <span class="material-symbols-rounded" aria-hidden="true">monitoring</span> Prometheus & Grafana
+                            </span>
+                            <span class="skill-chip">
+                                <span class="material-symbols-rounded" aria-hidden="true">database</span> Big Data Analytics
+                            </span>
+                            <span class="skill-chip">
+                                <span class="material-symbols-rounded" aria-hidden="true">search_insights</span> OpenSearch / ELK
+                            </span>
+                            <span class="skill-chip">
+                                <span class="material-symbols-rounded" aria-hidden="true">psychology</span> Machine Learning
+                            </span>
+                            <span class="skill-chip">
+                                <span class="material-symbols-rounded" aria-hidden="true">network_check</span> Network Quality Assurance
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Category 4: Leadership & Management -->
+                    <div class="competency-category">
+                        <div class="cat-header">
+                            <div class="cat-icon">
+                                <span class="material-symbols-rounded" aria-hidden="true">engineering</span>
+                            </div>
+                            <h3 class="cat-title" data-i18n="skills_cat_4">Liderazgo & Gestión</h3>
+                        </div>
+                        <div class="skills-chip-list">
+                            <span class="skill-chip">
+                                <span class="material-symbols-rounded" aria-hidden="true">supervisor_account</span> Tech Leadership
+                            </span>
+                            <span class="skill-chip">
+                                <span class="material-symbols-rounded" aria-hidden="true">public</span> Equipos Multi-país
+                            </span>
+                            <span class="skill-chip">
+                                <span class="material-symbols-rounded" aria-hidden="true">speed</span> Agile & Scrum
+                            </span>
+                            <span class="skill-chip">
+                                <span class="material-symbols-rounded" aria-hidden="true">handshake</span> Gestión de Proveedores
+                            </span>
+                            <span class="skill-chip">
+                                <span class="material-symbols-rounded" aria-hidden="true">school</span> Mentoría Técnica
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Strategic Impact / Focus Areas Section -->
+            <section id="impact" class="reveal">
+                <div class="section-header">
+                    <p class="section-subtitle" data-i18n="impact_subtitle">Casos de Valor</p>
+                    <h2 class="section-title" data-i18n="impact_title">Áreas de Impacto Clave</h2>
+                </div>
+
+                <div class="impact-grid">
+                    <article class="impact-card">
+                        <span class="impact-tag" data-i18n="impact_1_tag">Telecom & Resiliencia</span>
+                        <h3 class="impact-title" data-i18n="impact_1_title">Plataforma de Aseguramiento de Red</h3>
+                        <p class="impact-desc" data-i18n="impact_1_desc">Arquitectura para la ingesta y correlación de eventos en tiempo real, garantizando continuidad de servicio a millones de usuarios.</p>
+                        <div class="impact-icon-decor" aria-hidden="true">
+                            <span class="material-symbols-rounded">cell_tower</span>
+                        </div>
+                    </article>
+
+                    <article class="impact-card">
+                        <span class="impact-tag" data-i18n="impact_2_tag">Integración de Sistemas</span>
+                        <h3 class="impact-title" data-i18n="impact_2_title">Gestión Automatizada de Inventario OSS/BSS</h3>
+                        <p class="impact-desc" data-i18n="impact_2_desc">Sincronización automatizada entre sistemas de inventario físico y lógico con detección y remediación de discrepancias.</p>
+                        <div class="impact-icon-decor" aria-hidden="true">
+                            <span class="material-symbols-rounded">inventory_2</span>
+                        </div>
+                    </article>
+
+                    <article class="impact-card">
+                        <span class="impact-tag" data-i18n="impact_3_tag">Big Data & Analítica</span>
+                        <h3 class="impact-title" data-i18n="impact_3_title">Ecosistema Unificado de Telemetría</h3>
+                        <p class="impact-desc" data-i18n="impact_3_desc">Consolidación de métricas de red y plataformas en dashboards ejecutivos y operacionales para toma de decisiones ágil.</p>
+                        <div class="impact-icon-decor" aria-hidden="true">
+                            <span class="material-symbols-rounded">analytics</span>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Direct Contact Section -->
+            <section id="contact" class="contact-section reveal">
+                <div class="section-header">
+                    <p class="section-subtitle" data-i18n="contact_subtitle">¿Conversamos?</p>
+                    <h2 class="section-title" data-i18n="contact_title">Conectemos</h2>
+                </div>
+
+                <div class="contact-card-wrapper">
+                    <p class="contact-intro" data-i18n="contact_desc">
+                        Si buscas liderar la arquitectura de tus plataformas, modernizar tus sistemas de telecomunicaciones o colaborar en proyectos de alto impacto, contáctame:
+                    </p>
+
+                    <div class="contact-channels-grid">
+                        <!-- LinkedIn -->
+                        <a href="https://www.linkedin.com/in/carlosfuentealba/" target="_blank" rel="noopener noreferrer" class="channel-card">
+                            <div class="channel-icon">
+                                <svg role="img" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                            </div>
+                            <div class="channel-info">
+                                <div class="channel-name">
+                                    <span data-i18n="linkedin_title">LinkedIn</span>
+                                    <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                                </div>
+                                <div class="channel-desc" data-i18n="linkedin_desc">Trayectoria profesional completa, experiencia y recomendaciones.</div>
+                            </div>
+                        </a>
+
+                        <!-- GitHub -->
+                        <a href="https://github.com/cfuentea" target="_blank" rel="noopener noreferrer" class="channel-card">
+                            <div class="channel-icon">
+                                <svg role="img" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+                            </div>
+                            <div class="channel-info">
+                                <div class="channel-name">
+                                    <span data-i18n="github_title">GitHub</span>
+                                    <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                                </div>
+                                <div class="channel-desc" data-i18n="github_desc">Herramientas, scripts de automatización y código compartido.</div>
+                            </div>
+                        </a>
+
+                        <!-- Email Direct / Copy -->
+                        <button class="channel-card btn-copy-email js-copy-email" data-email="contacto@fuentealba.dev" aria-label="Copiar correo electrónico contacto@fuentealba.dev">
+                            <div class="channel-icon">
+                                <span class="material-symbols-rounded" aria-hidden="true">alternate_email</span>
+                            </div>
+                            <div class="channel-info">
+                                <div class="channel-name">
+                                    <span data-i18n="email_title">Correo Electrónico</span>
+                                    <span class="material-symbols-rounded" aria-hidden="true">content_copy</span>
+                                </div>
+                                <div class="channel-desc" data-i18n="email_desc">Escríbeme directamente para consultas o propuestas de valor.</div>
+                            </div>
+                        </button>
+
+                        <!-- Location / Availability -->
+                        <div class="channel-card">
+                            <div class="channel-icon">
+                                <span class="material-symbols-rounded" aria-hidden="true">location_on</span>
+                            </div>
+                            <div class="channel-info">
+                                <div class="channel-name">
+                                    <span data-i18n="location_title">Ubicación</span>
+                                </div>
+                                <div class="channel-desc" data-i18n="location_desc">Santiago, Chile • Disponible para trabajo remoto e híbrido.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <p class="footer-copy">&copy; <span id="year"></span> Carlos Fuentealba Flores. <span data-i18n="footer_rights">Todos los derechos reservados.</span></p>
+            <p class="footer-sub" data-i18n="footer_tech">Construido con estándares modernos de la Web • 100% Lighthouse</p>
+        </div>
+    </footer>
+
+    <!-- Accessible Back To Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Volver arriba" data-i18n-aria="back_to_top">
+        <span class="material-symbols-rounded" aria-hidden="true">arrow_upward</span>
+    </button>
+
+    <!-- Live Toast Notification for Clipboard feedback -->
+    <div id="toast" class="toast" role="status" aria-live="polite" aria-hidden="true">
+        <span class="material-symbols-rounded" aria-hidden="true">check_circle</span>
+        <span id="toast-message" data-i18n="hero_email_copied">¡Email copiado al portapapeles!</span>
     </div>
 
+    <!-- Modular Vanilla JS -->
     <script type="module" src="js/main.js"></script>
 </body>
 
