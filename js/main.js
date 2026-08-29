@@ -193,7 +193,7 @@ document.addEventListener('DOMContentLoaded', () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    // --- 6. Toast & Email Copy Functionality ---
+    // --- 6. Toast & Copy Functionality ---
     function showToast(message) {
         if (toastTimeout) clearTimeout(toastTimeout);
         toastMessage.textContent = message;
@@ -219,6 +219,47 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Terminal JSON Copy
+    const terminalCopyBtn = document.querySelector('.js-terminal-copy');
+    if (terminalCopyBtn) {
+        terminalCopyBtn.addEventListener('click', async (e) => {
+            e.preventDefault();
+            const codeBlock = document.querySelector('.terminal-code code');
+            const textToCopy = codeBlock ? codeBlock.textContent : JSON.stringify({
+                role: "Solutions Architect & Tech Lead",
+                domain: "fuentealba.dev",
+                focus: [
+                    "Resilient Architectures (99.99% SLA)",
+                    "OSS/BSS Automation & Integration",
+                    "Predictive Observability & Telemetry"
+                ],
+                core_stack: ["Python", "Linux/Cloud", "FastAPI", "Kafka", "Grafana"],
+                track_record: "15+ yrs | 5+ countries | 100+ flows",
+                status: "Available for strategic leadership"
+            }, null, 2);
+
+            try {
+                await navigator.clipboard.writeText(textToCopy);
+                terminalCopyBtn.classList.add('copied');
+                const copyTextSpan = terminalCopyBtn.querySelector('.copy-text');
+                const prevText = copyTextSpan ? copyTextSpan.textContent : '';
+                if (copyTextSpan) {
+                    copyTextSpan.textContent = translations[currentLang].terminal_copied_feedback || '¡Copiado!';
+                }
+                showToast(translations[currentLang].terminal_copied_feedback || '¡JSON copiado al portapapeles!');
+                
+                setTimeout(() => {
+                    terminalCopyBtn.classList.remove('copied');
+                    if (copyTextSpan) {
+                        copyTextSpan.textContent = translations[currentLang].terminal_copy_btn || prevText;
+                    }
+                }, 2000);
+            } catch (err) {
+                showToast('Error al copiar');
+            }
+        });
+    }
 
     // --- 7. Year initialization ---
     if (yearSpan) {

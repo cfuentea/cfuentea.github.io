@@ -146,16 +146,67 @@
                 </div>
 
                 <div class="hero-media">
-                    <div class="avatar-container">
-                        <div class="avatar-inner">
-                            <picture>
-                                <source srcset="img/perfil.webp" type="image/webp">
-                                <img src="img/perfil.jpeg" alt="Fotografía de Carlos Fuentealba Flores" width="556" height="556" fetchpriority="high" decoding="async">
-                            </picture>
+                    <div class="terminal-card" aria-label="Terminal interactivo de especificación técnica">
+                        <div class="terminal-header">
+                            <div class="terminal-controls" aria-hidden="true">
+                                <span class="terminal-dot terminal-dot-close"></span>
+                                <span class="terminal-dot terminal-dot-min"></span>
+                                <span class="terminal-dot terminal-dot-max"></span>
+                            </div>
+                            <div class="terminal-title">
+                                <span class="terminal-prompt-icon" aria-hidden="true">&gt;_</span>
+                                <span>cfuentea@fuentealba.dev:~</span>
+                            </div>
+                            <div class="terminal-actions">
+                                <button class="terminal-copy-btn js-terminal-copy" aria-label="Copiar JSON del perfil" title="Copiar JSON">
+                                    <span class="material-symbols-rounded" aria-hidden="true">content_copy</span>
+                                    <span class="copy-text" data-i18n="terminal_copy_btn">Copiar JSON</span>
+                                </button>
+                            </div>
                         </div>
-                        <div class="avatar-tag">
-                            <span class="material-symbols-rounded" aria-hidden="true">verified</span>
-                            <span>Architect</span>
+
+                        <div class="terminal-body">
+                            <div class="terminal-line">
+                                <span class="t-prompt">$</span>
+                                <span class="t-cmd">whoami</span>
+                            </div>
+                            <div class="terminal-output t-quote" data-i18n="terminal_whoami">
+                                "Carlos Fuentealba — Solutions Architect &amp; Engineering Tech Lead. Transformando la complejidad de telecomunicaciones en plataformas resilientes y automatizadas."
+                            </div>
+
+                            <div class="terminal-line t-spacing-top">
+                                <span class="t-prompt">$</span>
+                                <span class="t-cmd">cat profile.json</span>
+                            </div>
+
+                            <pre class="terminal-code"><code><span class="t-bracket">{</span>
+  <span class="t-key">"role"</span>: <span class="t-str" data-i18n="terminal_json_role">"Solutions Architect &amp; Tech Lead"</span>,
+  <span class="t-key">"domain"</span>: <span class="t-str" data-i18n="terminal_json_domain">"Telecom &amp; Plataformas Críticas"</span>,
+  <span class="t-key">"focus"</span>: <span class="t-bracket">[</span>
+    <span class="t-str" data-i18n="terminal_json_focus_1">"Arquitecturas Resilientes (SLA 99.99%)"</span>,
+    <span class="t-str" data-i18n="terminal_json_focus_2">"Automatización &amp; Integración OSS/BSS"</span>,
+    <span class="t-str" data-i18n="terminal_json_focus_3">"Observabilidad &amp; Telemetría Predictiva"</span>
+  <span class="t-bracket">]</span>,
+  <span class="t-key">"core_stack"</span>: <span class="t-bracket">[</span><span class="t-str">"Python"</span>, <span class="t-str">"Linux/Cloud"</span>, <span class="t-str">"FastAPI"</span>, <span class="t-str">"Kafka"</span>, <span class="t-str">"Grafana"</span><span class="t-bracket">]</span>,
+  <span class="t-key">"track_record"</span>: <span class="t-str" data-i18n="terminal_json_track">"15+ años | 5+ países | 100+ flujos críticos"</span>,
+  <span class="t-key">"status"</span>: <span class="t-str t-highlight" data-i18n="terminal_json_status">"Disponible para liderazgo estratégico"</span>
+<span class="t-bracket">}</span></code></pre>
+
+                            <div class="terminal-line t-active-prompt">
+                                <span class="t-prompt">$</span>
+                                <span class="t-cursor" aria-hidden="true"></span>
+                            </div>
+                        </div>
+
+                        <div class="terminal-footer">
+                            <div class="t-footer-item">
+                                <span class="material-symbols-rounded t-footer-icon" aria-hidden="true">cloud_done</span>
+                                <span data-i18n="terminal_footer_left">Arquitectura Cloud &amp; Telecom</span>
+                            </div>
+                            <div class="t-footer-item t-status-live">
+                                <span class="t-live-dot" aria-hidden="true"></span>
+                                <span data-i18n="terminal_footer_right">Online / Activo</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -189,6 +240,30 @@
                 </div>
 
                 <div class="about-grid">
+                    <div class="about-profile-card">
+                        <div class="about-avatar-wrapper">
+                            <div class="about-avatar-inner">
+                                <picture>
+                                    <source srcset="img/perfil.webp" type="image/webp">
+                                    <img src="img/perfil.jpeg" alt="Fotografía de Carlos Fuentealba Flores" width="200" height="200" loading="lazy" decoding="async">
+                                </picture>
+                            </div>
+                            <div class="about-avatar-tag">
+                                <span class="material-symbols-rounded" aria-hidden="true">verified</span>
+                                <span data-i18n="about_badge_role">Solutions Architect</span>
+                            </div>
+                        </div>
+                        <div class="about-profile-info">
+                            <h3 class="about-profile-name">Carlos Fuentealba</h3>
+                            <p class="about-profile-title" data-i18n="hero_role">Solutions Architect &amp; Engineering Tech Lead</p>
+                            <p class="about-profile-desc" data-i18n="about_profile_tagline">Especialista en resiliencia operacional y sistemas de misión crítica.</p>
+                            <div class="about-profile-meta">
+                                <span><span class="material-symbols-rounded" aria-hidden="true">location_on</span> Santiago, Chile</span>
+                                <span><span class="material-symbols-rounded" aria-hidden="true">domain</span> Telecom / Enterprise</span>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="about-narrative">
                         <p data-i18n="about_text">
                             Lidero equipos multipaís y proyectos estratégicos en el sector de telecomunicaciones, especializándome en la arquitectura de soluciones para plataformas y sistemas de misión crítica que soportan la operación diaria.
@@ -197,36 +272,36 @@
                             Desarrollo estrategias integrales de monitoreo, gestión de inventarios y aseguramiento de calidad de red, uniendo la visión de negocio con la excelencia en ejecución técnica mediante Python, Linux, Cloud y herramientas avanzadas de observabilidad.
                         </p>
                     </div>
+                </div>
 
-                    <div class="pillars-grid">
-                        <div class="pillar-card">
-                            <div class="pillar-icon-box">
-                                <span class="material-symbols-rounded" aria-hidden="true">architecture</span>
-                            </div>
-                            <h3 class="pillar-title" data-i18n="pillar_1_title">Arquitectura Resiliente</h3>
-                            <p class="pillar-desc" data-i18n="pillar_1_desc">Diseño de sistemas distribuidos tolerantes a fallos, altamente disponibles y preparados para soportar cargas masivas de datos.</p>
+                <div class="pillars-grid">
+                    <div class="pillar-card">
+                        <div class="pillar-icon-box">
+                            <span class="material-symbols-rounded" aria-hidden="true">architecture</span>
                         </div>
-                        <div class="pillar-card">
-                            <div class="pillar-icon-box">
-                                <span class="material-symbols-rounded" aria-hidden="true">sync_saved_locally</span>
-                            </div>
-                            <h3 class="pillar-title" data-i18n="pillar_2_title">Automatización Integral</h3>
-                            <p class="pillar-desc" data-i18n="pillar_2_desc">Eliminación de fricción y silos operativos conectando plataformas OSS/BSS e infraestructuras heterogéneas.</p>
+                        <h3 class="pillar-title" data-i18n="pillar_1_title">Arquitectura Resiliente</h3>
+                        <p class="pillar-desc" data-i18n="pillar_1_desc">Diseño de sistemas distribuidos tolerantes a fallos, altamente disponibles y preparados para soportar cargas masivas de datos.</p>
+                    </div>
+                    <div class="pillar-card">
+                        <div class="pillar-icon-box">
+                            <span class="material-symbols-rounded" aria-hidden="true">sync_saved_locally</span>
                         </div>
-                        <div class="pillar-card">
-                            <div class="pillar-icon-box">
-                                <span class="material-symbols-rounded" aria-hidden="true">groups</span>
-                            </div>
-                            <h3 class="pillar-title" data-i18n="pillar_3_title">Liderazgo de Equipos</h3>
-                            <p class="pillar-desc" data-i18n="pillar_3_desc">Dirección de equipos multidisciplinarios e internacionales con foco en buenas prácticas, mentoría y agilidad.</p>
+                        <h3 class="pillar-title" data-i18n="pillar_2_title">Automatización Integral</h3>
+                        <p class="pillar-desc" data-i18n="pillar_2_desc">Eliminación de fricción y silos operativos conectando plataformas OSS/BSS e infraestructuras heterogéneas.</p>
+                    </div>
+                    <div class="pillar-card">
+                        <div class="pillar-icon-box">
+                            <span class="material-symbols-rounded" aria-hidden="true">groups</span>
                         </div>
-                        <div class="pillar-card">
-                            <div class="pillar-icon-box">
-                                <span class="material-symbols-rounded" aria-hidden="true">insights</span>
-                            </div>
-                            <h3 class="pillar-title" data-i18n="pillar_4_title">Observabilidad Proactiva</h3>
-                            <p class="pillar-desc" data-i18n="pillar_4_desc">Implementación de telemetría y monitoreo predictivo para anticipar incidencias antes de que impacten al usuario.</p>
+                        <h3 class="pillar-title" data-i18n="pillar_3_title">Liderazgo de Equipos</h3>
+                        <p class="pillar-desc" data-i18n="pillar_3_desc">Dirección de equipos multidisciplinarios e internacionales con foco en buenas prácticas, mentoría y agilidad.</p>
+                    </div>
+                    <div class="pillar-card">
+                        <div class="pillar-icon-box">
+                            <span class="material-symbols-rounded" aria-hidden="true">insights</span>
                         </div>
+                        <h3 class="pillar-title" data-i18n="pillar_4_title">Observabilidad Proactiva</h3>
+                        <p class="pillar-desc" data-i18n="pillar_4_desc">Implementación de telemetría y monitoreo predictivo para anticipar incidencias antes de que impacten al usuario.</p>
                     </div>
                 </div>
             </section>

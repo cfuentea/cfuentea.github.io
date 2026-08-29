@@ -81,6 +81,22 @@ const translations = {
         location_title: "Ubicación",
         location_desc: "Santiago, Chile • Disponible para trabajo remoto e híbrido.",
 
+        // Terminal
+        terminal_whoami: "\"Carlos Fuentealba — Solutions Architect & Engineering Tech Lead. Transformando la complejidad de telecomunicaciones en plataformas resilientes y automatizadas.\"",
+        terminal_json_role: "\"Solutions Architect & Tech Lead\"",
+        terminal_json_domain: "\"Telecom & Plataformas Críticas\"",
+        terminal_json_focus_1: "\"Arquitecturas Resilientes (SLA 99.99%)\"",
+        terminal_json_focus_2: "\"Automatización & Integración OSS/BSS\"",
+        terminal_json_focus_3: "\"Observabilidad & Telemetría Predictiva\"",
+        terminal_json_track: "\"15+ años | 5+ países | 100+ flujos críticos\"",
+        terminal_json_status: "\"Disponible para liderazgo estratégico\"",
+        terminal_footer_left: "Arquitectura Cloud & Telecom",
+        terminal_footer_right: "Online / Activo",
+        terminal_copy_btn: "Copiar JSON",
+        terminal_copied_feedback: "¡JSON copiado!",
+        about_badge_role: "Solutions Architect",
+        about_profile_tagline: "Especialista en resiliencia operacional y sistemas de misión crítica.",
+
         // Footer
         footer_rights: "Todos los derechos reservados.",
         footer_tech: "Construido con estándares modernos de la Web • 100% Lighthouse"
@@ -166,6 +182,22 @@ const translations = {
         email_desc: "Reach out directly for consulting, speaking, or leadership opportunities.",
         location_title: "Location",
         location_desc: "Santiago, Chile • Open to remote and hybrid opportunities worldwide.",
+
+        // Terminal
+        terminal_whoami: "\"Carlos Fuentealba — Solutions Architect & Engineering Tech Lead. Transforming telecom complexity into resilient, highly automated platforms.\"",
+        terminal_json_role: "\"Solutions Architect & Tech Lead\"",
+        terminal_json_domain: "\"Telecom & Critical Platforms\"",
+        terminal_json_focus_1: "\"Resilient Architectures (99.99% SLA)\"",
+        terminal_json_focus_2: "\"OSS/BSS Automation & Integration\"",
+        terminal_json_focus_3: "\"Predictive Observability & Telemetry\"",
+        terminal_json_track: "\"15+ yrs | 5+ countries | 100+ critical flows\"",
+        terminal_json_status: "\"Available for strategic leadership\"",
+        terminal_footer_left: "Cloud & Telecom Architecture",
+        terminal_footer_right: "Online / Ready",
+        terminal_copy_btn: "Copy JSON",
+        terminal_copied_feedback: "JSON copied!",
+        about_badge_role: "Solutions Architect",
+        about_profile_tagline: "Specialist in operational resilience and mission-critical systems.",
 
         // Footer
         footer_rights: "All rights reserved.",
