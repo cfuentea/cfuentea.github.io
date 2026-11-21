@@ -4,73 +4,218 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carlos Fuentealba Flores | Solutions Architect & Engineering Tech Lead</title>
+    <title>Carlos Fuentealba Flores | Solutions Architect &amp; Engineering Tech Lead</title>
 
     <!-- Meta SEO Essentials -->
-    <meta name="description" content="Portfolio profesional de Carlos Fuentealba Flores. Solutions Architect & Tech Lead especializado en telecomunicaciones, resiliencia operacional, plataformas críticas y automatización a gran escala.">
+    <meta name="description" content="Portfolio profesional de Carlos Fuentealba Flores. Solutions Architect &amp; Tech Lead especializado en telecomunicaciones, resiliencia operacional, plataformas críticas y automatización a gran escala.">
     <meta name="author" content="Carlos Fuentealba Flores">
     <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#090d16" media="(prefers-color-scheme: dark)">
-    <meta name="theme-color" content="#f8fafc" media="(prefers-color-scheme: light)">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" id="meta-theme-color" content="#f7f8fa">
     <link rel="canonical" href="https://fuentealba.dev/">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><rect width=%2232%22 height=%2232%22 rx=%228%22 fill=%22%232563eb%22/><text x=%2216%22 y=%2222%22 font-family=%22system-ui,-apple-system,sans-serif%22 font-size=%2216%22 font-weight=%22800%22 fill=%22white%22 text-anchor=%22middle%22>CF</text></svg>">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="apple-touch-icon" href="img/perfil.jpeg">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231d4ed8'/%3E%3Ctext x='16' y='22' font-family='system-ui,-apple-system,sans-serif' font-size='15' font-weight='800' fill='white' text-anchor='middle'%3ECF%3C/text%3E%3C/svg%3E">
 
-    <!-- Open Graph / Facebook / LinkedIn -->
+    <!-- Open Graph / LinkedIn -->
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="fuentealba.dev">
+    <meta property="og:locale" content="es_CL">
+    <meta property="og:locale:alternate" content="en_US">
     <meta property="og:url" content="https://fuentealba.dev/">
-    <meta property="og:title" content="Carlos Fuentealba Flores | Solutions Architect & Tech Lead">
+    <meta property="og:title" content="Carlos Fuentealba Flores | Solutions Architect &amp; Tech Lead">
     <meta property="og:description" content="Especialista en arquitectura de plataformas críticas, resiliencia operacional y automatización a gran escala en telecomunicaciones.">
     <meta property="og:image" content="https://fuentealba.dev/img/perfil.jpeg">
+    <meta property="og:image:alt" content="Retrato profesional de Carlos Fuentealba Flores">
 
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://fuentealba.dev/">
-    <meta name="twitter:title" content="Carlos Fuentealba Flores | Solutions Architect & Tech Lead">
+    <meta name="twitter:title" content="Carlos Fuentealba Flores | Solutions Architect &amp; Tech Lead">
     <meta name="twitter:description" content="Especialista en arquitectura de plataformas críticas, resiliencia operacional y automatización a gran escala.">
     <meta name="twitter:image" content="https://fuentealba.dev/img/perfil.jpeg">
 
-    <!-- Preconnect to Google Fonts for Maximum Lighthouse Performance -->
+    <!-- Anti-FOUC Theme & Progressive Enhancement Bootstrap -->
+    <script>
+        (function () {
+            var root = document.documentElement;
+            root.classList.add('js-ready');
+            var theme = 'light';
+            try {
+                var saved = localStorage.getItem('theme');
+                if (saved === 'dark' || saved === 'light') {
+                    theme = saved;
+                } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    theme = 'dark';
+                }
+            } catch (e) {
+                if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    theme = 'dark';
+                }
+            }
+            root.setAttribute('data-theme', theme);
+            var meta = document.getElementById('meta-theme-color');
+            if (meta) {
+                meta.setAttribute('content', theme === 'dark' ? '#090d14' : '#f7f8fa');
+            }
+        })();
+    </script>
+
+    <!-- Optimized Fonts (Typography + Monospace only; icons are zero-latency inline SVG) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,400..700,0..1,0&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
 
-    <!-- Structured Data (JSON-LD) for Enhanced SEO -->
+    <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Carlos Fuentealba Flores",
-      "jobTitle": "Solutions Architect & Engineering Tech Lead",
-      "url": "https://fuentealba.dev/",
-      "image": "https://fuentealba.dev/img/perfil.jpeg",
-      "sameAs": [
-        "https://www.linkedin.com/in/carlosfuentealba/",
-        "https://github.com/cfuentea"
-      ],
-      "knowsAbout": [
-        "Solutions Architecture",
-        "Telecommunications",
-        "OSS/BSS Integration",
-        "Python",
-        "Cloud Computing",
-        "High Availability",
-        "Observability",
-        "Big Data",
-        "Technical Leadership"
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://fuentealba.dev/#person",
+          "name": "Carlos Fuentealba Flores",
+          "jobTitle": "Solutions Architect & Engineering Tech Lead",
+          "url": "https://fuentealba.dev/",
+          "image": "https://fuentealba.dev/img/perfil.jpeg",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Santiago",
+            "addressCountry": "CL"
+          },
+          "sameAs": [
+            "https://www.linkedin.com/in/carlosfuentealba/",
+            "https://github.com/cfuentea"
+          ],
+          "knowsAbout": [
+            "Solutions Architecture",
+            "Telecommunications",
+            "OSS/BSS Integration",
+            "Python",
+            "Cloud Computing",
+            "High Availability",
+            "Observability",
+            "Big Data",
+            "Technical Leadership"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://fuentealba.dev/#website",
+          "url": "https://fuentealba.dev/",
+          "name": "Carlos Fuentealba Flores — fuentealba.dev",
+          "inLanguage": ["es", "en"],
+          "author": { "@id": "https://fuentealba.dev/#person" }
+        }
       ]
     }
     </script>
 </head>
 
 <body>
-    <!-- Ambient Background Lighting -->
-    <div class="bg-ambient" aria-hidden="true">
-        <div class="ambient-orb-1"></div>
-        <div class="ambient-orb-2"></div>
-    </div>
+    <!-- Inline SVG Icon Sprite (Zero external font payload, zero FOUT, offline & proxy safe) -->
+    <svg xmlns="http://www.w3.org/2000/svg" hidden aria-hidden="true" focusable="false">
+        <defs>
+            <symbol id="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </symbol>
+            <symbol id="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="4"/>
+                <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+            </symbol>
+            <symbol id="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="4" y1="7" x2="20" y2="7"/>
+                <line x1="4" y1="12" x2="20" y2="12"/>
+                <line x1="4" y1="17" x2="20" y2="17"/>
+            </symbol>
+            <symbol id="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"/>
+                <line x1="6" y1="6" x2="18" y2="18"/>
+            </symbol>
+            <symbol id="icon-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="5" width="18" height="14" rx="2"/>
+                <path d="m3 7 9 6 9-6"/>
+            </symbol>
+            <symbol id="icon-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="9" y="9" width="13" height="13" rx="2"/>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </symbol>
+            <symbol id="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 6 9 17l-5-5"/>
+            </symbol>
+            <symbol id="icon-arrow-up-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M7 17 17 7"/>
+                <path d="M7 7h10v10"/>
+            </symbol>
+            <symbol id="icon-arrow-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m18 15-6-6-6 6"/>
+            </symbol>
+            <symbol id="icon-cloud" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/>
+            </symbol>
+            <symbol id="icon-terminal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="4 17 10 11 4 5"/>
+                <line x1="12" y1="19" x2="20" y2="19"/>
+            </symbol>
+            <symbol id="icon-activity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+            </symbol>
+            <symbol id="icon-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </symbol>
+            <symbol id="icon-layers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                <polyline points="2 17 12 22 22 17"/>
+                <polyline points="2 12 12 17 22 12"/>
+            </symbol>
+            <symbol id="icon-workflow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="7" height="7" rx="1.5"/>
+                <rect x="14" y="14" width="7" height="7" rx="1.5"/>
+                <path d="M10 6.5h4a2 2 0 0 1 2 2V14"/>
+                <path d="M6.5 10v4a2 2 0 0 0 2 2H14"/>
+            </symbol>
+            <symbol id="icon-signal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9"/>
+                <path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5"/>
+                <circle cx="12" cy="12" r="2"/>
+                <path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5"/>
+                <path d="M19.1 4.9C23 8.8 23 15.1 19.1 19"/>
+            </symbol>
+            <symbol id="icon-database" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                <path d="M3 5v14a9 3 0 0 0 18 0V5"/>
+                <path d="M3 12a9 3 0 0 0 18 0"/>
+            </symbol>
+            <symbol id="icon-map-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                <circle cx="12" cy="10" r="3"/>
+            </symbol>
+            <symbol id="icon-building" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4" y="2" width="16" height="20" rx="2"/>
+                <path d="M9 22v-4h6v4M8 6h.01M16 6h.01M12 6h.01M12 10h.01M12 14h.01M16 10h.01M16 14h.01M8 10h.01M8 14h.01"/>
+            </symbol>
+            <symbol id="icon-print" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 6 2 18 2 18 9"/>
+                <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
+                <rect x="6" y="14" width="12" height="8"/>
+            </symbol>
+            <symbol id="icon-linkedin" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+            </symbol>
+            <symbol id="icon-github" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/>
+            </symbol>
+        </defs>
+    </svg>
+
+    <!-- Subtle Atmospheric Surface Wash (GPU-friendly, zero heavy filter blur) -->
+    <div class="bg-canvas" aria-hidden="true"></div>
 
     <!-- Accessibility: Skip Link -->
     <a href="#main-content" class="skip-link" data-i18n="skip_content">Saltar al contenido principal</a>
@@ -78,11 +223,12 @@
     <!-- Header & Navigation -->
     <header class="header-wrapper">
         <div class="container header-inner">
-            <a href="#" class="logo" aria-label="Carlos Fuentealba - Inicio">
-                <span>CF</span><span class="logo-accent">.</span>
+            <a href="#top" class="logo" aria-label="Carlos Fuentealba — Ir al inicio" data-i18n-aria="logo_aria">
+                <span class="logo-mark">CF</span><span class="logo-dot" aria-hidden="true">.</span>
+                <span class="logo-domain">fuentealba.dev</span>
             </a>
 
-            <nav class="nav-desktop" aria-label="Navegación principal">
+            <nav class="nav-desktop" aria-label="Navegación principal" data-i18n-aria="nav_aria">
                 <ul class="nav-links">
                     <li><a href="#about" data-i18n="nav_about">Sobre Mí</a></li>
                     <li><a href="#skills" data-i18n="nav_skills">Competencias</a></li>
@@ -92,120 +238,122 @@
             </nav>
 
             <div class="header-controls">
-                <button id="lang-toggle" class="btn-icon-toggle" aria-label="Cambiar idioma" data-i18n-aria="lang_toggle_label">EN</button>
-                <button id="theme-toggle" class="btn-icon-toggle" aria-label="Cambiar tema" data-i18n-aria="theme_toggle_label">
-                    <span class="material-symbols-rounded" aria-hidden="true">dark_mode</span>
+                <button type="button" id="lang-toggle" class="btn-icon-toggle btn-lang" aria-label="Cambiar idioma a Inglés" data-i18n-aria="lang_toggle_label">EN</button>
+                <button type="button" id="theme-toggle" class="btn-icon-toggle" aria-label="Cambiar a tema oscuro">
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-moon"/></svg>
                 </button>
-                <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-expanded="false" aria-controls="mobile-nav-drawer" aria-label="Abrir menú" data-i18n-aria="menu_toggle_label">
-                    <span class="material-symbols-rounded" aria-hidden="true">menu</span>
+                <button type="button" id="mobile-menu-toggle" class="mobile-menu-toggle" aria-expanded="false" aria-controls="mobile-nav-drawer" aria-label="Abrir menú de navegación">
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-menu"/></svg>
                 </button>
             </div>
         </div>
 
         <!-- Mobile Navigation Drawer -->
-        <div id="mobile-nav-drawer" class="mobile-nav-drawer" aria-label="Menú móvil">
-            <ul>
-                <li><a href="#about" data-i18n="nav_about">Sobre Mí</a></li>
-                <li><a href="#skills" data-i18n="nav_skills">Competencias</a></li>
-                <li><a href="#impact" data-i18n="nav_impact">Impacto</a></li>
-                <li><a href="#contact" data-i18n="nav_contact">Contacto</a></li>
-            </ul>
-        </div>
+        <nav id="mobile-nav-drawer" class="mobile-nav-drawer" aria-label="Menú de navegación móvil" data-i18n-aria="mobile_nav_aria" hidden>
+            <div class="container">
+                <ul>
+                    <li><a href="#about" data-i18n="nav_about">Sobre Mí</a></li>
+                    <li><a href="#skills" data-i18n="nav_skills">Competencias</a></li>
+                    <li><a href="#impact" data-i18n="nav_impact">Impacto</a></li>
+                    <li><a href="#contact" data-i18n="nav_contact">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
     </header>
 
     <!-- Main Content -->
     <main id="main-content">
-        <!-- Hero Section -->
-        <div class="container">
-            <section class="hero-section">
+        <div id="top" class="container">
+            <!-- Hero Section -->
+            <section class="hero-section" aria-labelledby="hero-heading">
                 <div class="hero-content">
-                    <div class="badge-status">
-                        <span class="pulse-dot" aria-hidden="true"></span>
-                        <span data-i18n="hero_badge">Disponible para consultoría estratégica y liderazgo</span>
-                    </div>
-                    <p class="hero-greeting" data-i18n="hero_greeting">Hola, soy</p>
-                    <h1 class="hero-title" data-i18n="hero_name">Carlos Fuentealba</h1>
-                    <h2 class="hero-subtitle" data-i18n="hero_role">Solutions Architect & Engineering Tech Lead</h2>
+                    <p class="hero-eyebrow" data-i18n="hero_eyebrow">Santiago, CL · Solutions Architect · Telecom &amp; Cloud</p>
+                    <h1 id="hero-heading" class="hero-title" data-i18n="hero_name">Carlos Fuentealba</h1>
+                    <p class="hero-subtitle" data-i18n="hero_role">Solutions Architect &amp; Engineering Tech Lead</p>
                     <p class="hero-description" data-i18n="hero_desc">
-                        Transformo la complejidad operativa en plataformas de telecomunicaciones y sistemas de datos altamente escalables, resilientes y automatizados.
+                        Transformo la complejidad operativa en plataformas de telecomunicaciones y ecosistemas de datos altamente escalables, resilientes y automatizados.
                     </p>
                     <div class="hero-actions">
-                        <a href="#contact" class="btn-primary">
-                            <span class="material-symbols-rounded" aria-hidden="true">mail</span>
+                        <a href="#contact" id="cta-contact" class="btn-primary">
+                            <svg class="icon icon-sm" aria-hidden="true" focusable="false"><use href="#icon-mail"/></svg>
                             <span data-i18n="hero_cta_contact">Iniciar Conversación</span>
                         </a>
-                        <a href="https://www.linkedin.com/in/carlosfuentealba/" target="_blank" rel="noopener noreferrer" class="btn-secondary">
-                            <span class="material-symbols-rounded" aria-hidden="true">open_in_new</span>
+                        <a href="https://www.linkedin.com/in/carlosfuentealba/" id="cta-linkedin" target="_blank" rel="noopener noreferrer" class="btn-secondary">
                             <span data-i18n="hero_cta_linkedin">Ver LinkedIn</span>
+                            <svg class="icon icon-sm" aria-hidden="true" focusable="false"><use href="#icon-arrow-up-right"/></svg>
                         </a>
-                        <button class="btn-secondary js-copy-email" data-email="contacto@fuentealba.dev" aria-label="Copiar correo electrónico">
-                            <span class="material-symbols-rounded" aria-hidden="true">content_copy</span>
+                        <button type="button" id="cta-copy-email" class="btn-ghost js-copy-email" data-email="contacto@fuentealba.dev" aria-label="Copiar correo electrónico contacto@fuentealba.dev" data-i18n-aria="hero_copy_email_aria">
+                            <svg class="icon icon-sm" aria-hidden="true" focusable="false"><use href="#icon-copy"/></svg>
                             <span data-i18n="hero_copy_email">Copiar Email</span>
                         </button>
                     </div>
                 </div>
 
+                <!-- Interactive Architecture Terminal -->
                 <div class="hero-media">
-                    <div class="terminal-card" aria-label="Terminal interactivo de especificación técnica">
+                    <div class="terminal-card" role="region" aria-label="Terminal interactivo del perfil técnico" data-i18n-aria="terminal_aria">
                         <div class="terminal-header">
-                            <div class="terminal-controls" aria-hidden="true">
-                                <span class="terminal-dot terminal-dot-close"></span>
-                                <span class="terminal-dot terminal-dot-min"></span>
-                                <span class="terminal-dot terminal-dot-max"></span>
-                            </div>
-                            <div class="terminal-title">
-                                <span class="terminal-prompt-icon" aria-hidden="true">&gt;_</span>
-                                <span>cfuentea@fuentealba.dev:~</span>
-                            </div>
-                            <div class="terminal-actions">
-                                <button class="terminal-copy-btn js-terminal-copy" aria-label="Copiar JSON del perfil" title="Copiar JSON">
-                                    <span class="material-symbols-rounded" aria-hidden="true">content_copy</span>
-                                    <span class="copy-text" data-i18n="terminal_copy_btn">Copiar JSON</span>
+                            <div class="terminal-topbar">
+                                <div class="terminal-identity">
+                                    <span class="terminal-prompt-mark" aria-hidden="true">&gt;_</span>
+                                    <span class="terminal-host">cfuentea@fuentealba.dev</span>
+                                </div>
+                                <button type="button" id="terminal-copy-btn" class="terminal-copy-btn js-terminal-copy" aria-label="Copiar contenido de la terminal" data-i18n-aria="terminal_copy_aria">
+                                    <svg class="icon icon-xs" aria-hidden="true" focusable="false"><use href="#icon-copy"/></svg>
+                                    <span class="copy-text" data-i18n="terminal_copy_btn">Copiar</span>
                                 </button>
+                            </div>
+                            <div class="terminal-tabs" role="tablist" aria-label="Terminal views">
+                                <button type="button" class="terminal-tab active" role="tab" aria-selected="true" data-terminal-view="profile" data-i18n="terminal_tab_profile">profile.json</button>
+                                <button type="button" class="terminal-tab" role="tab" aria-selected="false" data-terminal-view="stack" data-i18n="terminal_tab_stack">stack</button>
+                                <button type="button" class="terminal-tab" role="tab" aria-selected="false" data-terminal-view="sla" data-i18n="terminal_tab_sla">sla</button>
+                                <button type="button" class="terminal-tab" role="tab" aria-selected="false" data-terminal-view="contact" data-i18n="terminal_tab_contact">contact</button>
                             </div>
                         </div>
 
                         <div class="terminal-body">
                             <div class="terminal-line">
-                                <span class="t-prompt">$</span>
-                                <span class="t-cmd">whoami</span>
-                            </div>
-                            <div class="terminal-output t-quote" data-i18n="terminal_whoami">
-                                "Carlos Fuentealba — Solutions Architect &amp; Engineering Tech Lead. Transformando la complejidad de telecomunicaciones en plataformas resilientes y automatizadas."
+                                <span class="t-prompt" aria-hidden="true">$</span>
+                                <span id="terminal-active-cmd" class="t-cmd">cat profile.json</span>
                             </div>
 
-                            <div class="terminal-line t-spacing-top">
-                                <span class="t-prompt">$</span>
-                                <span class="t-cmd">cat profile.json</span>
-                            </div>
-
-                            <pre class="terminal-code"><code><span class="t-bracket">{</span>
-  <span class="t-key">"role"</span>: <span class="t-str" data-i18n="terminal_json_role">"Solutions Architect &amp; Tech Lead"</span>,
-  <span class="t-key">"domain"</span>: <span class="t-str" data-i18n="terminal_json_domain">"Telecom &amp; Plataformas Críticas"</span>,
+                            <pre id="terminal-output-pre" class="terminal-code"><code id="terminal-output-code"><span class="t-bracket">{</span>
+  <span class="t-key">"role"</span>: <span class="t-str">"Solutions Architect &amp; Tech Lead"</span>,
+  <span class="t-key">"domain"</span>: <span class="t-str">"Telecom &amp; Plataformas Críticas"</span>,
   <span class="t-key">"focus"</span>: <span class="t-bracket">[</span>
-    <span class="t-str" data-i18n="terminal_json_focus_1">"Arquitecturas Resilientes (SLA 99.99%)"</span>,
-    <span class="t-str" data-i18n="terminal_json_focus_2">"Automatización &amp; Integración OSS/BSS"</span>,
-    <span class="t-str" data-i18n="terminal_json_focus_3">"Observabilidad &amp; Telemetría Predictiva"</span>
+    <span class="t-str">"Arquitecturas Resilientes (SLA 99.99%)"</span>,
+    <span class="t-str">"Automatización &amp; Integración OSS/BSS"</span>,
+    <span class="t-str">"Observabilidad &amp; Telemetría Predictiva"</span>
   <span class="t-bracket">]</span>,
-  <span class="t-key">"core_stack"</span>: <span class="t-bracket">[</span><span class="t-str">"Python"</span>, <span class="t-str">"Linux/Cloud"</span>, <span class="t-str">"FastAPI"</span>, <span class="t-str">"Kafka"</span>, <span class="t-str">"Grafana"</span><span class="t-bracket">]</span>,
-  <span class="t-key">"track_record"</span>: <span class="t-str" data-i18n="terminal_json_track">"15+ años | 5+ países | 100+ flujos críticos"</span>,
-  <span class="t-key">"status"</span>: <span class="t-str t-highlight" data-i18n="terminal_json_status">"Disponible para liderazgo estratégico"</span>
+  <span class="t-key">"stack"</span>: <span class="t-bracket">[</span><span class="t-str">"Python"</span>, <span class="t-str">"Cloud"</span>, <span class="t-str">"FastAPI"</span>, <span class="t-str">"Kafka"</span>, <span class="t-str">"Grafana"</span><span class="t-bracket">]</span>,
+  <span class="t-key">"track"</span>: <span class="t-str">"15+ años | 5+ países | 100+ flujos"</span>,
+  <span class="t-key">"status"</span>: <span class="t-str t-highlight">"Disponible para liderazgo estratégico"</span>
 <span class="t-bracket">}</span></code></pre>
 
-                            <div class="terminal-line t-active-prompt">
-                                <span class="t-prompt">$</span>
-                                <span class="t-cursor" aria-hidden="true"></span>
-                            </div>
+                            <form id="terminal-form" class="terminal-input-line" autocomplete="off">
+                                <label for="terminal-cmd-input" class="t-prompt">$</label>
+                                <input
+                                    id="terminal-cmd-input"
+                                    class="terminal-cmd-input"
+                                    type="text"
+                                    spellcheck="false"
+                                    autocapitalize="off"
+                                    placeholder="escribe 'help' y pulsa Enter…"
+                                    data-i18n-placeholder="terminal_input_placeholder"
+                                    aria-label="Comando interactivo de terminal"
+                                    data-i18n-aria="terminal_input_aria"
+                                >
+                            </form>
                         </div>
 
                         <div class="terminal-footer">
                             <div class="t-footer-item">
-                                <span class="material-symbols-rounded t-footer-icon" aria-hidden="true">cloud_done</span>
+                                <svg class="icon icon-xs t-footer-icon" aria-hidden="true" focusable="false"><use href="#icon-cloud"/></svg>
                                 <span data-i18n="terminal_footer_left">Arquitectura Cloud &amp; Telecom</span>
                             </div>
                             <div class="t-footer-item t-status-live">
-                                <span class="t-live-dot" aria-hidden="true"></span>
-                                <span data-i18n="terminal_footer_right">Online / Activo</span>
+                                <span class="t-live-indicator" aria-hidden="true"></span>
+                                <span data-i18n="terminal_footer_right">Disponible · Remoto / Híbrido</span>
                             </div>
                         </div>
                     </div>
@@ -213,7 +361,7 @@
             </section>
 
             <!-- Stats & Key Metrics Strip -->
-            <div class="stats-strip reveal" aria-label="Métricas destacadas de trayectoria">
+            <section class="stats-strip reveal" aria-label="Métricas destacadas de trayectoria" data-i18n-aria="stats_aria">
                 <div class="stat-item">
                     <div class="stat-number" data-i18n="stat_exp_num">15+</div>
                     <div class="stat-label" data-i18n="stat_exp_label">Años de Experiencia en TI</div>
@@ -228,29 +376,33 @@
                 </div>
                 <div class="stat-item">
                     <div class="stat-number" data-i18n="stat_auto_num">100+</div>
-                    <div class="stat-label" data-i18n="stat_auto_label">Integraciones & Flujos Críticos</div>
+                    <div class="stat-label" data-i18n="stat_auto_label">Integraciones y Flujos Críticos</div>
                 </div>
-            </div>
+            </section>
 
             <!-- About Section -->
-            <section id="about" class="reveal">
+            <section id="about" class="page-section reveal" aria-labelledby="about-heading">
                 <div class="section-header">
                     <p class="section-subtitle" data-i18n="about_subtitle">Visión y Trayectoria</p>
-                    <h2 class="section-title" data-i18n="about_title">Arquitectura Estratégica y Liderazgo Técnico</h2>
+                    <h2 id="about-heading" class="section-title" data-i18n="about_title">Arquitectura Estratégica y Liderazgo Técnico</h2>
                 </div>
 
                 <div class="about-grid">
-                    <div class="about-profile-card">
+                    <aside class="about-profile-card">
                         <div class="about-avatar-wrapper">
                             <div class="about-avatar-inner">
                                 <picture>
                                     <source srcset="img/perfil.webp" type="image/webp">
-                                    <img src="img/perfil.jpeg" alt="Fotografía de Carlos Fuentealba Flores" width="200" height="200" loading="lazy" decoding="async">
+                                    <img
+                                        src="img/perfil.jpeg"
+                                        alt="Retrato profesional de Carlos Fuentealba Flores"
+                                        data-i18n-alt="about_avatar_alt"
+                                        width="160"
+                                        height="160"
+                                        loading="lazy"
+                                        decoding="async"
+                                    >
                                 </picture>
-                            </div>
-                            <div class="about-avatar-tag">
-                                <span class="material-symbols-rounded" aria-hidden="true">verified</span>
-                                <span data-i18n="about_badge_role">Solutions Architect</span>
                             </div>
                         </div>
                         <div class="about-profile-info">
@@ -258,14 +410,20 @@
                             <p class="about-profile-title" data-i18n="hero_role">Solutions Architect &amp; Engineering Tech Lead</p>
                             <p class="about-profile-desc" data-i18n="about_profile_tagline">Especialista en resiliencia operacional y sistemas de misión crítica.</p>
                             <div class="about-profile-meta">
-                                <span><span class="material-symbols-rounded" aria-hidden="true">location_on</span> Santiago, Chile</span>
-                                <span><span class="material-symbols-rounded" aria-hidden="true">domain</span> Telecom / Enterprise</span>
+                                <span class="meta-pill">
+                                    <svg class="icon icon-xs" aria-hidden="true" focusable="false"><use href="#icon-map-pin"/></svg>
+                                    <span data-i18n="about_meta_location">Santiago, Chile</span>
+                                </span>
+                                <span class="meta-pill">
+                                    <svg class="icon icon-xs" aria-hidden="true" focusable="false"><use href="#icon-building"/></svg>
+                                    <span data-i18n="about_meta_sector">Telecom / Enterprise</span>
+                                </span>
                             </div>
                         </div>
-                    </div>
+                    </aside>
 
                     <div class="about-narrative">
-                        <p data-i18n="about_text">
+                        <p class="narrative-lead" data-i18n="about_text">
                             Lidero equipos multipaís y proyectos estratégicos en el sector de telecomunicaciones, especializándome en la arquitectura de soluciones para plataformas y sistemas de misión crítica que soportan la operación diaria.
                         </p>
                         <p data-i18n="about_text_2">
@@ -275,257 +433,256 @@
                 </div>
 
                 <div class="pillars-grid">
-                    <div class="pillar-card">
-                        <div class="pillar-icon-box">
-                            <span class="material-symbols-rounded" aria-hidden="true">architecture</span>
+                    <article class="pillar-card">
+                        <div class="pillar-header">
+                            <div class="pillar-icon-box" aria-hidden="true">
+                                <svg class="icon" focusable="false"><use href="#icon-layers"/></svg>
+                            </div>
+                            <span class="pillar-index" aria-hidden="true">01</span>
                         </div>
                         <h3 class="pillar-title" data-i18n="pillar_1_title">Arquitectura Resiliente</h3>
                         <p class="pillar-desc" data-i18n="pillar_1_desc">Diseño de sistemas distribuidos tolerantes a fallos, altamente disponibles y preparados para soportar cargas masivas de datos.</p>
-                    </div>
-                    <div class="pillar-card">
-                        <div class="pillar-icon-box">
-                            <span class="material-symbols-rounded" aria-hidden="true">sync_saved_locally</span>
+                    </article>
+
+                    <article class="pillar-card">
+                        <div class="pillar-header">
+                            <div class="pillar-icon-box" aria-hidden="true">
+                                <svg class="icon" focusable="false"><use href="#icon-workflow"/></svg>
+                            </div>
+                            <span class="pillar-index" aria-hidden="true">02</span>
                         </div>
                         <h3 class="pillar-title" data-i18n="pillar_2_title">Automatización Integral</h3>
                         <p class="pillar-desc" data-i18n="pillar_2_desc">Eliminación de fricción y silos operativos conectando plataformas OSS/BSS e infraestructuras heterogéneas.</p>
-                    </div>
-                    <div class="pillar-card">
-                        <div class="pillar-icon-box">
-                            <span class="material-symbols-rounded" aria-hidden="true">groups</span>
+                    </article>
+
+                    <article class="pillar-card">
+                        <div class="pillar-header">
+                            <div class="pillar-icon-box" aria-hidden="true">
+                                <svg class="icon" focusable="false"><use href="#icon-users"/></svg>
+                            </div>
+                            <span class="pillar-index" aria-hidden="true">03</span>
                         </div>
                         <h3 class="pillar-title" data-i18n="pillar_3_title">Liderazgo de Equipos</h3>
                         <p class="pillar-desc" data-i18n="pillar_3_desc">Dirección de equipos multidisciplinarios e internacionales con foco en buenas prácticas, mentoría y agilidad.</p>
-                    </div>
-                    <div class="pillar-card">
-                        <div class="pillar-icon-box">
-                            <span class="material-symbols-rounded" aria-hidden="true">insights</span>
+                    </article>
+
+                    <article class="pillar-card">
+                        <div class="pillar-header">
+                            <div class="pillar-icon-box" aria-hidden="true">
+                                <svg class="icon" focusable="false"><use href="#icon-activity"/></svg>
+                            </div>
+                            <span class="pillar-index" aria-hidden="true">04</span>
                         </div>
                         <h3 class="pillar-title" data-i18n="pillar_4_title">Observabilidad Proactiva</h3>
                         <p class="pillar-desc" data-i18n="pillar_4_desc">Implementación de telemetría y monitoreo predictivo para anticipar incidencias antes de que impacten al usuario.</p>
-                    </div>
+                    </article>
                 </div>
             </section>
 
             <!-- Technical Competencies Section -->
-            <section id="skills" class="reveal">
+            <section id="skills" class="page-section reveal" aria-labelledby="skills-heading">
                 <div class="section-header">
-                    <p class="section-subtitle" data-i18n="skills_subtitle">Stack & Especialidades</p>
-                    <h2 class="section-title" data-i18n="skills_title">Competencias Técnicas</h2>
+                    <p class="section-subtitle" data-i18n="skills_subtitle">Stack &amp; Especialidades</p>
+                    <h2 id="skills-heading" class="section-title" data-i18n="skills_title">Competencias Técnicas</h2>
+                </div>
+
+                <!-- Interactive Filter Bar -->
+                <div class="skills-filter-bar" role="group" aria-label="Filtrar competencias por área" data-i18n-aria="skills_filter_aria">
+                    <button type="button" class="filter-btn active" data-filter="all" aria-pressed="true" data-i18n="skills_filter_all">Todas</button>
+                    <button type="button" class="filter-btn" data-filter="architecture" aria-pressed="false" data-i18n="skills_cat_1">Arquitectura &amp; Cloud</button>
+                    <button type="button" class="filter-btn" data-filter="automation" aria-pressed="false" data-i18n="skills_cat_2">Desarrollo &amp; Automatización</button>
+                    <button type="button" class="filter-btn" data-filter="observability" aria-pressed="false" data-i18n="skills_cat_3">Observabilidad &amp; Datos</button>
+                    <button type="button" class="filter-btn" data-filter="leadership" aria-pressed="false" data-i18n="skills_cat_4">Liderazgo &amp; Gestión</button>
                 </div>
 
                 <div class="competencies-container">
                     <!-- Category 1: Architecture & Cloud -->
-                    <div class="competency-category">
+                    <article class="competency-category" data-category="architecture">
                         <div class="cat-header">
-                            <div class="cat-icon">
-                                <span class="material-symbols-rounded" aria-hidden="true">cloud_done</span>
+                            <div class="cat-icon" aria-hidden="true">
+                                <svg class="icon" focusable="false"><use href="#icon-cloud"/></svg>
                             </div>
-                            <h3 class="cat-title" data-i18n="skills_cat_1">Arquitectura & Cloud</h3>
+                            <h3 class="cat-title" data-i18n="skills_cat_1">Arquitectura &amp; Cloud</h3>
                         </div>
-                        <div class="skills-chip-list">
-                            <span class="skill-chip">
-                                <span class="material-symbols-rounded" aria-hidden="true">dns</span> Solutions Architecture
-                            </span>
-                            <span class="skill-chip">
-                                <span class="material-symbols-rounded" aria-hidden="true">hub</span> Microservicios & APIs
-                            </span>
-                            <span class="skill-chip">
-                                <span class="material-symbols-rounded" aria-hidden="true">cloud</span> AWS / GCP / Azure
-                            </span>
-                            <span class="skill-chip">
-                                <span class="material-symbols-rounded" aria-hidden="true">security</span> High Availability & DR
-                            </span>
-                            <span class="skill-chip">
-                                <span class="material-symbols-rounded" aria-hidden="true">dataset</span> Telecom OSS / BSS
-                            </span>
-                        </div>
-                    </div>
+                        <ul class="skills-chip-list">
+                            <li class="skill-chip">Solutions Architecture</li>
+                            <li class="skill-chip" data-i18n="skill_microservices">Microservicios &amp; APIs</li>
+                            <li class="skill-chip">AWS / GCP / Azure</li>
+                            <li class="skill-chip">High Availability &amp; DR</li>
+                            <li class="skill-chip">Telecom OSS / BSS</li>
+                        </ul>
+                    </article>
 
                     <!-- Category 2: Development & Automation -->
-                    <div class="competency-category">
+                    <article class="competency-category" data-category="automation">
                         <div class="cat-header">
-                            <div class="cat-icon">
-                                <span class="material-symbols-rounded" aria-hidden="true">terminal</span>
+                            <div class="cat-icon" aria-hidden="true">
+                                <svg class="icon" focusable="false"><use href="#icon-terminal"/></svg>
                             </div>
-                            <h3 class="cat-title" data-i18n="skills_cat_2">Desarrollo & Automatización</h3>
+                            <h3 class="cat-title" data-i18n="skills_cat_2">Desarrollo &amp; Automatización</h3>
                         </div>
-                        <div class="skills-chip-list">
-                            <span class="skill-chip">
-                                <span class="material-symbols-rounded" aria-hidden="true">code</span> Python (Advanced)
-                            </span>
-                            <span class="skill-chip">
-                                <span class="material-symbols-rounded" aria-hidden="true">memory</span> Linux / UNIX Systems
-                            </span>
-                            <span class="skill-chip">
-                                <span class="material-symbols-rounded" aria-hidden="true">deployed_code</span> CI/CD & DevOps
-                            </span>
-                            <span class="skill-chip">
-                                <span class="material-symbols-rounded" aria-hidden="true">integration_instructions</span> ETL & Data Pipelines
-                            </span>
-                            <span class="skill-chip">
-                                <span class="material-symbols-rounded" aria-hidden="true">smart_toy</span> Workflow Automation
-                            </span>
-                        </div>
-                    </div>
+                        <ul class="skills-chip-list">
+                            <li class="skill-chip">Python (Advanced)</li>
+                            <li class="skill-chip">Linux / UNIX Systems</li>
+                            <li class="skill-chip">CI/CD &amp; DevOps</li>
+                            <li class="skill-chip">ETL &amp; Data Pipelines</li>
+                            <li class="skill-chip">Workflow Automation</li>
+                        </ul>
+                    </article>
 
                     <!-- Category 3: Observability & Data -->
-                    <div class="competency-category">
+                    <article class="competency-category" data-category="observability">
                         <div class="cat-header">
-                            <div class="cat-icon">
-                                <span class="material-symbols-rounded" aria-hidden="true">query_stats</span>
+                            <div class="cat-icon" aria-hidden="true">
+                                <svg class="icon" focusable="false"><use href="#icon-activity"/></svg>
                             </div>
-                            <h3 class="cat-title" data-i18n="skills_cat_3">Observabilidad & Datos</h3>
+                            <h3 class="cat-title" data-i18n="skills_cat_3">Observabilidad &amp; Datos</h3>
                         </div>
-                        <div class="skills-chip-list">
-                            <span class="skill-chip">
-                                <span class="material-symbols-rounded" aria-hidden="true">monitoring</span> Prometheus & Grafana
-                            </span>
-                            <span class="skill-chip">
-                                <span class="material-symbols-rounded" aria-hidden="true">database</span> Big Data Analytics
-                            </span>
-                            <span class="skill-chip">
-                                <span class="material-symbols-rounded" aria-hidden="true">search_insights</span> OpenSearch / ELK
-                            </span>
-                            <span class="skill-chip">
-                                <span class="material-symbols-rounded" aria-hidden="true">psychology</span> Machine Learning
-                            </span>
-                            <span class="skill-chip">
-                                <span class="material-symbols-rounded" aria-hidden="true">network_check</span> Network Quality Assurance
-                            </span>
-                        </div>
-                    </div>
+                        <ul class="skills-chip-list">
+                            <li class="skill-chip">Prometheus &amp; Grafana</li>
+                            <li class="skill-chip">Big Data Analytics</li>
+                            <li class="skill-chip">OpenSearch / ELK</li>
+                            <li class="skill-chip">Machine Learning</li>
+                            <li class="skill-chip">Network Quality Assurance</li>
+                        </ul>
+                    </article>
 
                     <!-- Category 4: Leadership & Management -->
-                    <div class="competency-category">
+                    <article class="competency-category" data-category="leadership">
                         <div class="cat-header">
-                            <div class="cat-icon">
-                                <span class="material-symbols-rounded" aria-hidden="true">engineering</span>
+                            <div class="cat-icon" aria-hidden="true">
+                                <svg class="icon" focusable="false"><use href="#icon-users"/></svg>
                             </div>
-                            <h3 class="cat-title" data-i18n="skills_cat_4">Liderazgo & Gestión</h3>
+                            <h3 class="cat-title" data-i18n="skills_cat_4">Liderazgo &amp; Gestión</h3>
                         </div>
-                        <div class="skills-chip-list">
-                            <span class="skill-chip">
-                                <span class="material-symbols-rounded" aria-hidden="true">supervisor_account</span> Tech Leadership
-                            </span>
-                            <span class="skill-chip">
-                                <span class="material-symbols-rounded" aria-hidden="true">public</span> Equipos Multi-país
-                            </span>
-                            <span class="skill-chip">
-                                <span class="material-symbols-rounded" aria-hidden="true">speed</span> Agile & Scrum
-                            </span>
-                            <span class="skill-chip">
-                                <span class="material-symbols-rounded" aria-hidden="true">handshake</span> Gestión de Proveedores
-                            </span>
-                            <span class="skill-chip">
-                                <span class="material-symbols-rounded" aria-hidden="true">school</span> Mentoría Técnica
-                            </span>
-                        </div>
-                    </div>
+                        <ul class="skills-chip-list">
+                            <li class="skill-chip">Tech Leadership</li>
+                            <li class="skill-chip" data-i18n="skill_multicountry">Equipos Multi-país</li>
+                            <li class="skill-chip">Agile &amp; Scrum</li>
+                            <li class="skill-chip" data-i18n="skill_vendors">Gestión de Proveedores</li>
+                            <li class="skill-chip" data-i18n="skill_mentoring">Mentoría Técnica</li>
+                        </ul>
+                    </article>
                 </div>
             </section>
 
             <!-- Strategic Impact / Focus Areas Section -->
-            <section id="impact" class="reveal">
+            <section id="impact" class="page-section reveal" aria-labelledby="impact-heading">
                 <div class="section-header">
                     <p class="section-subtitle" data-i18n="impact_subtitle">Casos de Valor</p>
-                    <h2 class="section-title" data-i18n="impact_title">Áreas de Impacto Clave</h2>
+                    <h2 id="impact-heading" class="section-title" data-i18n="impact_title">Áreas de Impacto Clave</h2>
                 </div>
 
                 <div class="impact-grid">
                     <article class="impact-card">
-                        <span class="impact-tag" data-i18n="impact_1_tag">Telecom & Resiliencia</span>
+                        <div class="impact-card-top">
+                            <span class="impact-tag" data-i18n="impact_1_tag">Telecom &amp; Resiliencia</span>
+                            <span class="impact-icon-decor" aria-hidden="true">
+                                <svg class="icon" focusable="false"><use href="#icon-signal"/></svg>
+                            </span>
+                        </div>
                         <h3 class="impact-title" data-i18n="impact_1_title">Plataforma de Aseguramiento de Red</h3>
                         <p class="impact-desc" data-i18n="impact_1_desc">Arquitectura para la ingesta y correlación de eventos en tiempo real, garantizando continuidad de servicio a millones de usuarios.</p>
-                        <div class="impact-icon-decor" aria-hidden="true">
-                            <span class="material-symbols-rounded">cell_tower</span>
+                        <div class="impact-foot">
+                            <span class="impact-metric" data-i18n="impact_1_metric">SLA 99.99% · Tiempo real</span>
                         </div>
                     </article>
 
                     <article class="impact-card">
-                        <span class="impact-tag" data-i18n="impact_2_tag">Integración de Sistemas</span>
+                        <div class="impact-card-top">
+                            <span class="impact-tag" data-i18n="impact_2_tag">Integración de Sistemas</span>
+                            <span class="impact-icon-decor" aria-hidden="true">
+                                <svg class="icon" focusable="false"><use href="#icon-workflow"/></svg>
+                            </span>
+                        </div>
                         <h3 class="impact-title" data-i18n="impact_2_title">Gestión Automatizada de Inventario OSS/BSS</h3>
                         <p class="impact-desc" data-i18n="impact_2_desc">Sincronización automatizada entre sistemas de inventario físico y lógico con detección y remediación de discrepancias.</p>
-                        <div class="impact-icon-decor" aria-hidden="true">
-                            <span class="material-symbols-rounded">inventory_2</span>
+                        <div class="impact-foot">
+                            <span class="impact-metric" data-i18n="impact_2_metric">Reconciliación automatizada</span>
                         </div>
                     </article>
 
                     <article class="impact-card">
-                        <span class="impact-tag" data-i18n="impact_3_tag">Big Data & Analítica</span>
+                        <div class="impact-card-top">
+                            <span class="impact-tag" data-i18n="impact_3_tag">Big Data &amp; Analítica</span>
+                            <span class="impact-icon-decor" aria-hidden="true">
+                                <svg class="icon" focusable="false"><use href="#icon-database"/></svg>
+                            </span>
+                        </div>
                         <h3 class="impact-title" data-i18n="impact_3_title">Ecosistema Unificado de Telemetría</h3>
-                        <p class="impact-desc" data-i18n="impact_3_desc">Consolidación de métricas de red y plataformas en dashboards ejecutivos y operacionales para toma de decisiones ágil.</p>
-                        <div class="impact-icon-decor" aria-hidden="true">
-                            <span class="material-symbols-rounded">analytics</span>
+                        <p class="impact-desc" data-i18n="impact_3_desc">Consolidación de métricas de red y plataformas en paneles ejecutivos y operacionales para una toma de decisiones ágil.</p>
+                        <div class="impact-foot">
+                            <span class="impact-metric" data-i18n="impact_3_metric">Observabilidad end-to-end</span>
                         </div>
                     </article>
                 </div>
             </section>
 
             <!-- Direct Contact Section -->
-            <section id="contact" class="contact-section reveal">
+            <section id="contact" class="page-section contact-section reveal" aria-labelledby="contact-heading">
                 <div class="section-header">
                     <p class="section-subtitle" data-i18n="contact_subtitle">¿Conversamos?</p>
-                    <h2 class="section-title" data-i18n="contact_title">Conectemos</h2>
+                    <h2 id="contact-heading" class="section-title" data-i18n="contact_title">Conectemos</h2>
                 </div>
 
                 <div class="contact-card-wrapper">
                     <p class="contact-intro" data-i18n="contact_desc">
-                        Si buscas liderar la arquitectura de tus plataformas, modernizar tus sistemas de telecomunicaciones o colaborar en proyectos de alto impacto, contáctame:
+                        Si buscas liderar la arquitectura de tus plataformas, modernizar sistemas de telecomunicaciones o colaborar en proyectos de alto impacto, contáctame:
                     </p>
 
                     <div class="contact-channels-grid">
                         <!-- LinkedIn -->
-                        <a href="https://www.linkedin.com/in/carlosfuentealba/" target="_blank" rel="noopener noreferrer" class="channel-card">
-                            <div class="channel-icon">
-                                <svg role="img" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                        <a href="https://www.linkedin.com/in/carlosfuentealba/" id="channel-linkedin" target="_blank" rel="noopener noreferrer" class="channel-card">
+                            <div class="channel-icon" aria-hidden="true">
+                                <svg class="icon" focusable="false"><use href="#icon-linkedin"/></svg>
                             </div>
                             <div class="channel-info">
                                 <div class="channel-name">
                                     <span data-i18n="linkedin_title">LinkedIn</span>
-                                    <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                                    <svg class="icon icon-xs channel-action-icon" aria-hidden="true" focusable="false"><use href="#icon-arrow-up-right"/></svg>
                                 </div>
                                 <div class="channel-desc" data-i18n="linkedin_desc">Trayectoria profesional completa, experiencia y recomendaciones.</div>
                             </div>
                         </a>
 
                         <!-- GitHub -->
-                        <a href="https://github.com/cfuentea" target="_blank" rel="noopener noreferrer" class="channel-card">
-                            <div class="channel-icon">
-                                <svg role="img" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+                        <a href="https://github.com/cfuentea" id="channel-github" target="_blank" rel="noopener noreferrer" class="channel-card">
+                            <div class="channel-icon" aria-hidden="true">
+                                <svg class="icon" focusable="false"><use href="#icon-github"/></svg>
                             </div>
                             <div class="channel-info">
                                 <div class="channel-name">
                                     <span data-i18n="github_title">GitHub</span>
-                                    <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                                    <svg class="icon icon-xs channel-action-icon" aria-hidden="true" focusable="false"><use href="#icon-arrow-up-right"/></svg>
                                 </div>
                                 <div class="channel-desc" data-i18n="github_desc">Herramientas, scripts de automatización y código compartido.</div>
                             </div>
                         </a>
 
                         <!-- Email Direct / Copy -->
-                        <button class="channel-card btn-copy-email js-copy-email" data-email="contacto@fuentealba.dev" aria-label="Copiar correo electrónico contacto@fuentealba.dev">
-                            <div class="channel-icon">
-                                <span class="material-symbols-rounded" aria-hidden="true">alternate_email</span>
+                        <button type="button" id="channel-email" class="channel-card channel-card-button js-copy-email" data-email="contacto@fuentealba.dev" aria-label="Copiar correo electrónico contacto@fuentealba.dev" data-i18n-aria="hero_copy_email_aria">
+                            <div class="channel-icon" aria-hidden="true">
+                                <svg class="icon" focusable="false"><use href="#icon-mail"/></svg>
                             </div>
                             <div class="channel-info">
                                 <div class="channel-name">
                                     <span data-i18n="email_title">Correo Electrónico</span>
-                                    <span class="material-symbols-rounded" aria-hidden="true">content_copy</span>
+                                    <svg class="icon icon-xs channel-action-icon" aria-hidden="true" focusable="false"><use href="#icon-copy"/></svg>
                                 </div>
-                                <div class="channel-desc" data-i18n="email_desc">Escríbeme directamente para consultas o propuestas de valor.</div>
+                                <div class="channel-desc" data-i18n="email_desc">contacto@fuentealba.dev — Haz clic para copiar la dirección.</div>
                             </div>
                         </button>
 
                         <!-- Location / Availability -->
-                        <div class="channel-card">
-                            <div class="channel-icon">
-                                <span class="material-symbols-rounded" aria-hidden="true">location_on</span>
+                        <div class="channel-card channel-card-static">
+                            <div class="channel-icon" aria-hidden="true">
+                                <svg class="icon" focusable="false"><use href="#icon-map-pin"/></svg>
                             </div>
                             <div class="channel-info">
                                 <div class="channel-name">
                                     <span data-i18n="location_title">Ubicación</span>
                                 </div>
-                                <div class="channel-desc" data-i18n="location_desc">Santiago, Chile • Disponible para trabajo remoto e híbrido.</div>
+                                <div class="channel-desc" data-i18n="location_desc">Santiago, Chile · Disponible para trabajo remoto e híbrido.</div>
                             </div>
                         </div>
                     </div>
@@ -537,19 +694,27 @@
     <!-- Footer -->
     <footer>
         <div class="container footer-content">
-            <p class="footer-copy">&copy; <span id="year"></span> Carlos Fuentealba Flores. <span data-i18n="footer_rights">Todos los derechos reservados.</span></p>
-            <p class="footer-sub" data-i18n="footer_tech">Construido con estándares modernos de la Web • 100% Lighthouse</p>
+            <div class="footer-left">
+                <p class="footer-copy">&copy; <span id="year">2026</span> Carlos Fuentealba Flores. <span data-i18n="footer_rights">Todos los derechos reservados.</span></p>
+                <p class="footer-sub" data-i18n="footer_tech">Construido con estándares modernos de la Web · Zero-bloat</p>
+            </div>
+            <div class="footer-actions">
+                <button type="button" id="print-profile-btn" class="btn-print" aria-label="Imprimir o guardar perfil como PDF" data-i18n-aria="print_cv_aria">
+                    <svg class="icon icon-xs" aria-hidden="true" focusable="false"><use href="#icon-print"/></svg>
+                    <span data-i18n="print_cv_btn">Imprimir perfil</span>
+                </button>
+            </div>
         </div>
     </footer>
 
     <!-- Accessible Back To Top Button -->
-    <button id="back-to-top" class="back-to-top" aria-label="Volver arriba" data-i18n-aria="back_to_top">
-        <span class="material-symbols-rounded" aria-hidden="true">arrow_upward</span>
+    <button type="button" id="back-to-top" class="back-to-top" aria-label="Volver arriba" data-i18n-aria="back_to_top">
+        <svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-arrow-up"/></svg>
     </button>
 
     <!-- Live Toast Notification for Clipboard feedback -->
-    <div id="toast" class="toast" role="status" aria-live="polite" aria-hidden="true">
-        <span class="material-symbols-rounded" aria-hidden="true">check_circle</span>
+    <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true">
+        <svg class="icon icon-sm toast-icon" aria-hidden="true" focusable="false"><use href="#icon-check"/></svg>
         <span id="toast-message" data-i18n="hero_email_copied">¡Email copiado al portapapeles!</span>
     </div>
 

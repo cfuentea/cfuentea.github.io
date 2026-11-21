@@ -1,0 +1,22 @@
+{
+  "name": "Carlos Fuentealba Flores | Solutions Architect & Engineering Tech Lead",
+  "short_name": "fuentealba.dev",
+  "description": "Solutions Architect & Engineering Tech Lead especializado en telecomunicaciones, resiliencia operacional, plataformas críticas y automatización a gran escala.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#090d14",
+  "theme_color": "#1d4ed8",
+  "lang": "es",
+  "icons": [
+    {
+      "src": "img/perfil.webp",
+      "sizes": "512x512",
+      "type": "image/webp"
+    },
+    {
+      "src": "img/perfil.jpeg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}
